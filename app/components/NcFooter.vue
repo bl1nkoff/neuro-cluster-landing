@@ -1,0 +1,140 @@
+<template>
+  <footer class="nc-footer__wrapper">
+    <div class="nc-footer">
+      <div class="nc-footer__logo">
+        НейроКластер
+      </div>
+
+      <div class="nc-footer__legal-content">
+        <div class="nc-footer__link nc-footer__link--pseudo">
+          © 2025 «НейроКластер». Все права защищены
+        </div>
+
+        <a
+          class="nc-footer__link"
+          href="/legal/privacy-policy"
+        >
+          Политика конфиденциальности
+        </a>
+
+        <a
+          class="nc-footer__link"
+          href="/legal/user-agreement"
+        >
+          Пользовательское соглашение
+        </a>
+      </div>
+
+      <div class="nc-footer__business-content">
+        <nav class="nc-footer__content-column">
+          <div class="nc-footer__content-header">
+            О компании
+          </div>
+
+          <a class="nc-footer__link nc-footer__link--primary" href="/#catalog-screen">
+            Нейро-сотрудники
+          </a>
+
+          <a class="nc-footer__link nc-footer__link--primary" href="/#roadmap-screen">
+            План внедрения ИИ
+          </a>
+
+          <a class="nc-footer__link nc-footer__link--primary" href="/#gui-screen">
+            Интерфейс платформы
+          </a>
+
+<!--          TODO: нет ссылок на
+          overview-screen
+          advantages-screen
+          contact-form-screen -->
+        </nav>
+
+        <div class="nc-footer__content-column">
+          <div class="nc-footer__content-header">
+            Контакты
+          </div>
+
+<!--          TODO: иконки-->
+
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="mailto:dom@neuro-cluster.com"
+          >
+            dom@neuro-cluster.com
+          </a>
+
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="https://t.me/neuro_cluster_bot"
+          >
+            @neuro_cluster_bot
+          </a>
+
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="tel:+79956982820"
+          >
+            +7 (995) 698-28-20
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script
+  setup
+  lang="ts"
+>
+</script>
+
+<style lang="sass">
+.nc-footer
+  padding: 32px 8px
+  margin: auto
+  width: var(--layout-content-width)
+  gap: 16px
+  display: grid
+  grid-template-areas: 'logo business-content' 'legal-content business-content'
+  grid-template-columns: auto max-content
+
+  &__wrapper
+    border-top: 3px #00181B solid
+
+  &__logo
+    color: inherit
+    font-size: 32px
+    font-weight: bold
+    grid-area: logo
+
+  &__content-column
+    display: flex
+    flex-direction: column
+
+  &__legal-content
+    grid-area: legal-content
+    align-self: end
+    display: flex
+
+  &__business-content
+    grid-area: business-content
+    display: flex
+    gap: 32px
+
+  &__content-header
+    font-weight: bold
+    margin-bottom: 4px
+
+  &__link
+    font-size: 14px
+    color: #545454
+    transition: color .2s ease
+    padding: 4px
+
+    &--primary
+      color: #ACACAC
+
+    &:hover:not(&--pseudo)
+      color: var(--text-color)
+
+</style>

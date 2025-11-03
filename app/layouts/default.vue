@@ -1,0 +1,22 @@
+<template>
+  <div class="nc-layout">
+    <nc-header />
+
+    <slot />
+
+    <nc-footer />
+  </div>
+</template>
+<script
+  setup
+  lang="ts"
+>
+</script>
+
+<style lang="sass">
+.nc-layout
+  min-height: 100vh
+  background: url(/background.png) repeat-y
+
+  --layout-content-width: 1300px
+</style>
