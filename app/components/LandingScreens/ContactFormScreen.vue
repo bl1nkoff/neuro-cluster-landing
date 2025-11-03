@@ -1,0 +1,234 @@
+<template>
+  <landing-screen
+    content-class="ls-contact-form-screen"
+    id="contact-form-screen"
+  >
+    <div class="nc-card ls-contact-form-screen__card">
+      <div class="nc-card__header ls-contact-form-screen__card-header">
+        Хотите увидеть, как ИИ усилит ваш бизнес?
+      </div>
+
+      <div class="nc-card__content ls-contact-form-screen__card-content">
+        <p>Мы покажем как работает платформа «НейроКластер», разберем ваши бизнес-задачи, и расскажем как
+          нейро-сотрудник сможет их решить
+        </p>
+
+
+        <p>На 30-минутной онлайн встрече вы увидите:</p>
+
+        <ul>
+          <li>Как работает нейро-сотрудник на реальном примере</li>
+          <li>Как быстро запустить и настроить ИИ под ваши цели</li>
+          <li>Как оценить эффективность, результаты и ROI</li>
+          <li>Как управлять расходами с точностью до копейки</li>
+          <li>С чего начать внедрение ИИ в ваших условиях</li>
+        </ul>
+      </div>
+    </div>
+
+    <form
+      class="nc-card ls-contact-form-screen__form"
+      @submit="submitForm($event)"
+    >
+      <div class="ls-contact-form-screen__form-inputs">
+        <nc-input
+          v-model="form.name"
+          label="Имя*"
+          placeholder="Имя*"
+          :error="invalidFormFields.includes('name')"
+        />
+
+        <nc-input
+          v-model="form.phone"
+          label="Телефон*"
+          placeholder="Телефон*"
+          type="phone"
+          :error="invalidFormFields.includes('phone')"
+        />
+
+        <nc-input
+          v-model="form.email"
+          label="Электронная почта"
+          placeholder="Электронная почта"
+          type="email"
+          :error="invalidFormFields.includes('email')"
+        />
+
+        <nc-input
+          v-model="form.company"
+          label="Компания"
+          placeholder="Компания"
+          :error="invalidFormFields.includes('company')"
+        />
+
+        <nc-input
+          v-model="form.message"
+          label="Сообщение"
+          placeholder="Сообщение"
+          :error="invalidFormFields.includes('message')"
+          multiline
+        />
+
+        <nc-checkbox
+          v-model="form.personalDataProcessingApproval"
+          :error="invalidFormFields.includes('personalDataProcessingApproval')"
+        >
+          <template #label>
+            Отправляя форму, вы принимаете правила
+            <a href="/legal/privacy-policy">Политики конфиденциальности</a>
+            и
+            <a href="/legal/user-agreement">Пользовательского соглашения</a>
+          </template>
+        </nc-checkbox>
+      </div>
+
+      <div
+        v-show="invalidFormFields.length"
+        class="ls-contact-form-screen__form-error"
+      >
+        Подсветили в форме ошибки
+      </div>
+
+      <button
+        type="submit"
+        class="ls-contact-form-screen__form-submit nc-clickable"
+      >
+        Узнать, как это работает
+      </button>
+    </form>
+  </landing-screen>
+</template>
+
+<script
+  setup
+  lang="ts"
+>
+import type {Reactive} from "vue";
+import type {ContactForm, ContactFormSendingResponse} from "~~/types/contact-form";
+import {validateForm} from "~~/utils/contact-form.utils";
+
+interface ContactFormClient extends ContactForm {
+  personalDataProcessingApproval: boolean
+}
+
+const form: Reactive<ContactFormClient> = reactive(
+  {
+    name: '',
+    phone: '',
+    email: '',
+    company: '',
+    message: '',
+    personalDataProcessingApproval: false,
+  }
+)
+
+const invalidFormFields: Ref<string[]> = ref([])
+
+function validateClientForm (): void {
+  const errors: string[] = []
+
+  if (!form.personalDataProcessingApproval) {
+    errors
+      .push(
+        'personalDataProcessingApproval'
+      )
+  }
+
+  const invalidFields = validateForm(form)
+
+  errors.push(...invalidFields)
+
+  invalidFormFields.value = errors
+}
+
+const isSubmitting = ref(false)
+
+async function submitForm (event: SubmitEvent) {
+  event.preventDefault()
+
+  validateClientForm()
+
+  if (invalidFormFields.value.length >= 1) {
+    return
+  }
+
+  isSubmitting.value = true
+
+  try {
+    await $fetch<ContactFormSendingResponse>(
+      '/api/contact',
+    {
+        method: 'POST',
+        body: form,
+      }
+    )
+
+    alert('Спасибо! Мы скоро свяжемся с вами.')
+
+    resetForm()
+  } catch (error) {
+    console.error('Ошибка отправки формы:', error)
+
+    alert(`Не удалось отправить сообщение. Попробуйте позже.\n${error}`)
+  } finally {
+    isSubmitting.value = false
+  }
+}
+
+function resetForm(): void {
+  form.name = ''
+  form.phone = ''
+  form.email = ''
+  form.company = ''
+  form.message = ''
+  form.personalDataProcessingApproval = false
+}
+
+</script>
+
+<style lang="sass">
+.ls-contact-form-screen
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 24px
+
+  &__card
+    padding: 32px 20px
+
+  &__card-header
+    font-size: 32px
+    font-weight: bold
+    margin-bottom: 32px
+
+  &__card-content
+    display: flex
+    flex-direction: column
+    gap: 32px
+    font-size: 20px
+
+  &__form
+    display: flex
+    flex-direction: column
+    gap: 24px
+    padding: 32px 20px
+
+  &__form-inputs
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  &__form-submit
+    border-radius: 20px
+    font-size: 20px
+    font-weight: bold
+    padding: 24px
+    color: var(--text-color)
+    text-align: center
+    background: linear-gradient(to right, #062259 0%, #053AA2 100%)
+    border: none
+
+  &__form-error
+    padding: 20px
+    border-radius: 20px
+    background: rgba(102, 20, 20, 0.4)
+</style>
