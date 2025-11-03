@@ -19,10 +19,6 @@
           Нейро-сотрудники
         </a>
 
-<!--          TODO: нет ссылок на
-        overview-screen
-         -->
-
         <a
           href="/#roadmap-screen"
           class="nc-header-button"
@@ -117,6 +113,10 @@ onBeforeUnmount(() => {
 
   &__wrapper
     border-bottom: 3px #00181B solid
+    position: sticky
+    top: 0
+    z-index: 100
+    background: var(--background-color)
 
   &__logo
     color: inherit
@@ -126,11 +126,14 @@ onBeforeUnmount(() => {
 .nc-header-button
   padding: 8px 16px
   border-radius: 8px
-  transition: .2s ease color
+  transition-timing-function: ease
+  transition-duration: 0.2s
+  transition-property: color, border-color
   color: #ACACAC
 
   &:hover
     color: var(--text-color)
+    border-color: var(--text-color)
 
   &--outline
     border: 2px solid #00181B

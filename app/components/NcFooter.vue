@@ -42,11 +42,6 @@
           <a class="nc-footer__link nc-footer__link--primary" href="/#gui-screen">
             Интерфейс платформы
           </a>
-
-<!--          TODO: нет ссылок на
-          overview-screen
-          advantages-screen
-          contact-form-screen -->
         </nav>
 
         <div class="nc-footer__content-column">

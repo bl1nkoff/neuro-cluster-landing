@@ -68,8 +68,12 @@
     color: #ACACAC
     font-size: 24px
 
+  &__image
+    height: 275px
+
   &__cards
-    display: flex
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
     gap: 32px
     justify-items: stretch
     color: #ACACAC

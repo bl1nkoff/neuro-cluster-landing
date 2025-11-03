@@ -317,14 +317,14 @@ function selectProductCode(productCode: PRODUCT_CODES) {
 
   &__product-description
     flex-grow: 1
-    align-content: center
     font-size: 20px
+    padding: 110px 20px 20px
 
   &__button
     display: block
-    font-size: 28px
+    font-size: 24px
     background: linear-gradient(to right, #062259 0%, #053AA2 100%)
-    padding: 32px
+    padding: 30px
     border-radius: 20px
     text-align: center
 </style>

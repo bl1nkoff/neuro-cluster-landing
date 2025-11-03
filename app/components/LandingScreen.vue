@@ -33,7 +33,7 @@ defineProps<
 
 .landing-screen
   width: var(--layout-content-width)
-  margin: 0 auto 200px
+  margin: 0 auto 100px
   padding: 32px 8px
   display: flex
   flex-direction: column
