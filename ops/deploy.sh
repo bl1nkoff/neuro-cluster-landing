@@ -35,8 +35,8 @@ echo "> Начинаем деплой билда"
 echo ""
 echo "========================="
 
-rsync -av --delete ./.output/ root@62.217.182.224:/root/landing/
-rsync -av --delete ./.output/public root@62.217.182.224:/var/www/landing/
+rsync -av --delete ./.output root@62.217.182.224:/root/landing/.output
+rsync -av --delete ./.output/public root@62.217.182.224:/var/www/landing
 
 
 # === Деплой кред ===
