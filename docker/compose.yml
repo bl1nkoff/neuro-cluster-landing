@@ -1,0 +1,17 @@
+services:
+  web-server:
+    image: 'node:24'
+    container_name: nc-landing__web-server
+    working_dir: /root/app
+    command: node .output/server/index.mjs
+    env_file:
+      - ../.env
+      - ../.env.credentials
+      - ../.env.production
+    ports:
+      - "9030:3000"
+    volumes:
+      - type: bind
+        source: /root/landing
+        target: /root/app
+    restart: always

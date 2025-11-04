@@ -53,12 +53,17 @@
     </div>
 
     <div class="ls-gui-screen__screenshots">
+<!--      <img-->
+<!--        v-for="(screenshotUrl, screenshotIndex) in SCREENSHOT_URL"-->
+<!--        :key="screenshotIndex"-->
+<!--        :src="screenshotUrl"-->
+<!--        :alt="`Скриншот № ${screenshotIndex}`"-->
+<!--        class="ls-gui-screen__screenshot"-->
+<!--      />-->
       <img
-        v-for="(screenshotUrl, screenshotIndex) in SCREENSHOT_URL"
-        :key="screenshotIndex"
-        :src="screenshotUrl"
-        :alt="`Скриншот № ${screenshotIndex}`"
-        class="ls-gui-screen__screenshot"
+        src="/gui-screenshots.png"
+        alt="Скриншоты панели управления"
+        class="ls-gui-screen__screenshots"
       />
     </div>
   </landing-screen>
@@ -110,4 +115,7 @@ const SCREENSHOT_URL: string[] = [
 
     &:nth-child(even)
       float: left
+
+  &__screenshots
+    width: 100%
 </style>
