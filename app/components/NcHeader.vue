@@ -143,7 +143,8 @@ function toggleNavbarOpen (value?: boolean): void {
     grid-template-areas: 'logo navbar-toggler' 'navbar navbar'
 
   &__wrapper
-    border-bottom: 3px #00181B solid
+    border-bottom: 3px var(--primary) solid
+    //border-bottom: 3px var(--text-color) solid
     position: sticky
     top: 0
     z-index: 100
@@ -183,6 +184,7 @@ function toggleNavbarOpen (value?: boolean): void {
     height: 24px
 
 .nc-header-button
+  display: inline-block
   padding: 8px 16px
   border-radius: 8px
   transition-timing-function: ease
@@ -204,5 +206,5 @@ function toggleNavbarOpen (value?: boolean): void {
     border-color: var(--text-color)
 
   &--outline
-    border: 2px solid #00181B
+    border: 2px solid var(--primary)
 </style>

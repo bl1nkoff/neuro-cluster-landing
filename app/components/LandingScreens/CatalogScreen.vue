@@ -1,9 +1,16 @@
 <template>
   <landing-screen
-    content-class="ls-catalog-screen"
+    class="ls-catalog-screen"
+    content-class="ls-catalog-screen__content"
     header="Готовые нейро-сотрудники"
     id="catalog-screen"
   >
+    <img
+      class="ls-catalog-screen__image"
+      src="/catalog-image.png"
+      alt="catalog-image"
+    />
+
     <div class="ls-catalog-screen__product-list">
       <button
         v-for="(product, productIndex) in PRODUCTS"
@@ -267,8 +274,13 @@ function selectProductCode(productCode: PRODUCT_CODES) {
 
 <style lang="sass">
 .ls-catalog-screen
-  display: flex
-  gap: 32px
+  position: relative
+  overflow: hidden
+
+  &__content
+    display: flex
+    gap: 32px
+    z-index: 1
 
   // mobile
   @media(max-width: 1000px)
@@ -279,6 +291,7 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     flex-direction: column
     gap: 24px
     flex-shrink: 0
+    position: relative
 
     // pc
     @media(min-width: 1000px)
@@ -345,6 +358,7 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     display: flex
     flex-direction: column
     gap: 24px
+    position: relative
 
     &--pseudo
       display: contents
@@ -365,4 +379,19 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     padding: 30px
     border-radius: 20px
     text-align: center
+
+  &__image
+    display: none
+    position: absolute
+    z-index: 0
+    bottom: 0
+    width: 100%
+
+    // pc
+    @media(min-width: 1000px)
+      right: -50%
+
+    // mobile
+    @media(max-width: 1000px)
+      left: 0
 </style>

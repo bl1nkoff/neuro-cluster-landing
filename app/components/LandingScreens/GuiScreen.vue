@@ -86,7 +86,6 @@ const SCREENSHOT_URL: string[] = [
     display: grid
     gap: 32px
     justify-items: stretch
-    color: var(--text-color-secondary)
     margin-bottom: 64px
 
     // pc

@@ -204,14 +204,10 @@ onBeforeUnmount(() => {
 
   &__step
     padding: 24px  24px 32px
-    color: var(--text-color-secondary)
     flex-shrink: 0
     display: grid
     transition: .2s ease color
     grid-template-columns: min-content auto
-
-    &:hover
-      color: var(--text-color)
 
     // pc
     @media(min-width: 1000px)

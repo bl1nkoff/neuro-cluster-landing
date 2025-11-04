@@ -26,6 +26,41 @@
       </div>
     </div>
 
+    <div class="nc-card ls-contact-form-screen__contacts-card">
+      <div class="nc-card__header">
+        Наши контакты
+      </div>
+
+      <div class="nc-card__content ls-contact-form-screen__contacts">
+        <a
+          class="nc-footer__link nc-footer__link--primary"
+          href="mailto:dom@neuro-cluster.com"
+        >
+          <img src="/icons/mail.svg" alt="mail-icon"/>
+
+          <span>dom@neuro-cluster.com</span>
+        </a>
+
+        <a
+          class="nc-footer__link nc-footer__link--primary"
+          href="https://t.me/neuro_cluster_bot"
+        >
+          <img src="/icons/telegram.svg" alt="telegram-icon"/>
+
+          <span>@neuro_cluster_bot</span>
+        </a>
+
+        <a
+          class="nc-footer__link nc-footer__link--primary"
+          href="tel:+79956982820"
+        >
+          <img src="/icons/phone.svg" alt="phone-icon"/>
+
+          <span>+7 (995) 698-28-20</span>
+        </a>
+      </div>
+    </div>
+
     <form
       class="nc-card ls-contact-form-screen__form"
       @submit="submitForm($event)"
@@ -192,9 +227,10 @@ function resetForm(): void {
 
   // pc
   @media(min-width: 1000px)
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-areas: 'card form' 'contacts-card form'
 
   &__card
+    grid-area: card
     padding: 32px 20px
 
   &__card-header
@@ -208,7 +244,15 @@ function resetForm(): void {
     gap: 32px
     font-size: 20px
 
+  &__contacts-card
+    grid-area: contacts-card
+
+  &__contacts
+    display: flex
+    flex-direction: column
+
   &__form
+    grid-area: form
     display: flex
     flex-direction: column
     gap: 24px

@@ -4,13 +4,7 @@
     content-class="ls-welcome-screen__content"
     id="welcome-screen"
   >
-    <img
-      class="ls-welcome-screen__image"
-      src="/welcome-image.png"
-      alt="welcome-image"
-    />
-
-    <div class="ls-welcome-screen__content">
+    <div class="ls-welcome-screen__info">
       <h1 class="ls-welcome-screen__slogan">
         Усиливаем бизнес<br/>искусственным интеллектом
       </h1>
@@ -26,6 +20,12 @@
         Посмотреть демо
       </a>
     </div>
+
+    <img
+      class="ls-welcome-screen__image"
+      src="/welcome-image.png"
+      alt="welcome-image"
+    />
   </landing-screen>
 </template>
 
@@ -42,11 +42,12 @@
   position: relative
   overflow: hidden
 
-  &__content
+  &__info
     display: flex
     flex-direction: column
     gap: 64px
     z-index: 1
+    position: relative
 
   &__slogan
     font-weight: bold
@@ -65,7 +66,7 @@
     // pc
     @media(min-width: 1000px)
       max-width: 66%
-      font-size: 28px
+      font-size: 24px
 
     // mobile
     @media(max-width: 1000px)
@@ -73,7 +74,7 @@
 
   &__go-to-form
     border-radius: 8px
-    font-size: 28px
+    font-size: 24px
     font-weight: bold
     padding: 24px
     color: var(--text-color)

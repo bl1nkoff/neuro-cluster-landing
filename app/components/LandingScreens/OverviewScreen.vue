@@ -30,7 +30,7 @@
         <div class="nc-card__header">Инженеры и консалтеры</div>
 
         <div class="nc-card__content">
-          Сначала наши консалтеры находят, где есть точка роста, которая позволит увеличить доходы или сократить расходы. Затем инженеры создают ИИ под эту задачу.<br>Технология ради результата, а не ради технологии
+          Сначала наши консалтеры находят, где есть точка роста, которая позволит увеличить доходы или сократить расходы. Затем инженеры создают ИИ под эту задачу. Технология ради результата, а не ради технологии
         </div>
       </div>
 
@@ -57,7 +57,6 @@
   height: 100%
   flex-grow: 1
   gap: 64px
-  padding-bottom: 128px
 
   &__description-wrapper
     display: flex
@@ -75,7 +74,7 @@
   &__image
     // pc
     @media(min-width: 1000px)
-      height: 275px
+      height: 250px
 
     // mobile
     @media(max-width: 1000px)
@@ -85,7 +84,6 @@
     display: grid
     gap: 32px
     justify-items: stretch
-    color: var(--text-color-secondary)
 
     // pc
     @media(min-width: 1000px)

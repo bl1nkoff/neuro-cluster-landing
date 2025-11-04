@@ -34,17 +34,17 @@ defineProps<
 .landing-screen
   width: var(--layout-content-width)
   margin: auto
-  padding: 32px 16px
+  padding: calc(max(var(--header-height, 0), 32px) + 32px) 16px 32px
   display: flex
   flex-direction: column
 
   // pc
   @media(min-width: 1000px)
-    margin-bottom: 100px
+    margin-bottom: 64px
 
   // mobile
   @media(max-width: 1000px)
-    margin-bottom: 64px
+    margin-bottom: 48px
 
   &__header
     font-weight: bold

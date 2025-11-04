@@ -35,6 +35,8 @@ body
   --text-color-secondary: #ACACAC
   --background-color: #000203
 
+  --primary: #04264D
+
   background: var(--background-color)
   color: var(--text-color)
   font-family: 'Inter', sans-serif
@@ -49,7 +51,8 @@ ul, ol
   padding-left: 1.5em
 
 .nc-card
-  background: #25252566
+  //background: #25252566
+  background: linear-gradient(to bottom, #2525257F, #1212127F)
   padding: 20px
   border-radius: 20px
   transition: color .2s ease
@@ -66,6 +69,11 @@ ul, ol
 
   &__content
     font-size: 16px
+    color: var(--text-color-secondary)
+    transition: color .2s ease
+
+  &:hover &__content
+    color: var(--text-color)
 
 .nc-clickable
   cursor: pointer

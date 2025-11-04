@@ -105,7 +105,7 @@
     grid-template-areas: 'logo' 'business-content' 'legal-content'
 
   &__wrapper
-    border-top: 3px #00181B solid
+    border-top: 3px var(--primary) solid
 
   &__logo
     color: inherit
