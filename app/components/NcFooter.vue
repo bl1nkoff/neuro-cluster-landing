@@ -129,7 +129,6 @@
 
     // pc
     @media(min-width: 1000px)
-      flex-direction: column
       gap: 32px
 
     // mobile
