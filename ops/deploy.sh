@@ -14,7 +14,7 @@ for arg in "$@"; do
   fi
 done
 
-if [ "$NEED_TO_BUILD" = false ]; then
+if [ "$NEED_TO_BUILD" = true ]; then
   echo "Building the app..."
 
   npm run generate || { echo "Build failed!"; exit 1; }
@@ -23,7 +23,7 @@ fi
 echo "Deploy the build..."
 rsync -av --delete ./dist/ root@62.217.182.224:/var/www/landing/
 
-if [ "$NEED_TO_DEPLOY_CREDENTIALS" = false ]; then
+if [ "$NEED_TO_DEPLOY_CREDENTIALS" = true ]; then
   echo "Deploy credentials..."
 
   rsync -av .env.credentials root@62.217.182.224:~/landing
