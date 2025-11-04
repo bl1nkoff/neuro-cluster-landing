@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # === Проверяем аргументы ===
 NEED_TO_BUILD=false
@@ -14,17 +15,36 @@ for arg in "$@"; do
   fi
 done
 
-if [ "$NEED_TO_BUILD" = true ]; then
-  echo "Building the app..."
 
-  npm run generate || { echo "Build failed!"; exit 1; }
+# === Билд ===
+if [ "$NEED_TO_BUILD" = true ]; then
+  echo "========================="
+  echo ""
+  echo "> Начинаем билд"
+  echo ""
+  echo "========================="
+
+  npm run generate
 fi
 
-echo "Deploy the build..."
+
+# === Деплой билда ===
+echo "========================="
+echo ""
+echo "> Начинаем деплой билда"
+echo ""
+echo "========================="
+
 rsync -av --delete ./dist/ root@62.217.182.224:/var/www/landing/
 
+
+# === Деплой кред ===
 if [ "$NEED_TO_DEPLOY_CREDENTIALS" = true ]; then
-  echo "Deploy credentials..."
+  echo "========================="
+  echo ""
+  echo "> Начинаем деплой кред"
+  echo ""
+  echo "========================="
 
   rsync -av .env.credentials root@62.217.182.224:~/landing
 fi
