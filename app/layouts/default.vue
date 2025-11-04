@@ -18,5 +18,11 @@
   min-height: 100vh
   background: url(/background.png) repeat-y
 
-  --layout-content-width: 1300px
+  // mobile
+  @media(min-width: 1000px)
+    --layout-content-width: 1300px
+
+  // mobile
+  @media(max-width: 1000px)
+    --layout-content-width: 100vw
 </style>

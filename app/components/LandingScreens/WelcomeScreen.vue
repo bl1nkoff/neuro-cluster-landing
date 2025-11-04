@@ -1,6 +1,7 @@
 <template>
   <landing-screen
-    content-class="ls-welcome-screen"
+    class="ls-welcome-screen"
+    content-class="ls-welcome-screen__content"
     id="welcome-screen"
   >
     <img
@@ -35,11 +36,11 @@
 <style lang="sass">
 .ls-welcome-screen
   display: flex
-  justify-content: flex-start
+  justify-content: center
   align-items: center
   height: calc(100vh - var(--header-height, 0px))
-  min-height: unset
   position: relative
+  overflow: hidden
 
   &__content
     display: flex
@@ -48,27 +49,56 @@
     z-index: 1
 
   &__slogan
-    font-size: 64px
     font-weight: bold
 
+    // pc
+    @media(min-width: 1000px)
+      font-size: 64px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 36px
+
   &__description
-    color: #ACACAC
-    font-size: 28px
-    max-width: 66%
+    color: var(--text-color-secondary)
+
+    // pc
+    @media(min-width: 1000px)
+      max-width: 66%
+      font-size: 28px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 24px
 
   &__go-to-form
     border-radius: 8px
     font-size: 28px
     font-weight: bold
     padding: 24px
-    width: 400px
     color: var(--text-color)
     text-align: center
     background: linear-gradient(to right, #062259 0%, #053AA2 100%)
 
+    // pc
+    @media(min-width: 1000px)
+      width: 400px
+
+    // mobile
+    @media(max-width: 1000px)
+      //font-size: 36px
+
   &__image
     position: absolute
-    right: 0
-    height: 100%
     z-index: 0
+    height: 100%
+    top: 0
+
+    // pc
+    @media(min-width: 1000px)
+      right: 0
+
+    // mobile
+    @media(max-width: 1000px)
+      left: 0
 </style>

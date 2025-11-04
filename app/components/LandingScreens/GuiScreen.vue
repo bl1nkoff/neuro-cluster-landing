@@ -78,11 +78,15 @@ const SCREENSHOT_URL: string[] = [
 <style lang="sass">
 .ls-gui-screen
   &__cards
-    display: flex
+    display: grid
     gap: 32px
     justify-items: stretch
-    color: #ACACAC
+    color: var(--text-color-secondary)
     margin-bottom: 64px
+
+    // pc
+    @media(min-width: 1000px)
+      grid-template-columns: repeat(3, 1fr)
 
   &__card
     flex-grow: 1
@@ -96,7 +100,7 @@ const SCREENSHOT_URL: string[] = [
   &__screenshot
     width: 75%
     border-radius: 20px
-    border: 3px solid #ACACAC
+    border: 3px solid var(--text-color-secondary)
 
     &:not(:first-child)
       margin-top: -15%

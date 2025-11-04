@@ -165,7 +165,6 @@ function recalculateLinePath () {
   linePath.value =`M 0 ${y * .5} L ${x * .5 - RADIUS} ${y * .5} A ${RADIUS} ${RADIUS} 0 0 1 ${x  * .5} ${y * .5 + RADIUS} L ${x * .5} ${y}`
 }
 
-// TODO: линии попадают не идеально в цент по высоте
 let resizeObserver: ResizeObserver | undefined = undefined
 
 onMounted(() => {
@@ -199,19 +198,30 @@ onBeforeUnmount(() => {
     width: 100%
 
     &--no-line
-      justify-content: flex-end
+      // pc
+      @media(min-width: 1000px)
+        justify-content: flex-end
 
   &__step
     padding: 24px  24px 32px
-    width: calc(50% - 32px)
-    color: #ACACAC
+    color: var(--text-color-secondary)
     flex-shrink: 0
     display: grid
-    grid-template-areas: 'number name' '_ description'
     transition: .2s ease color
+    grid-template-columns: min-content auto
 
     &:hover
       color: var(--text-color)
+
+    // pc
+    @media(min-width: 1000px)
+      width: calc(50% - 32px)
+      grid-template-areas: 'number name' '_ description'
+
+    // mobile
+    @media(max-width: 1000px)
+      width: 100%
+      grid-template-areas: 'number name' 'description description'
 
   &__step:hover &__step-number
     transform: scale(1.05)
@@ -224,9 +234,18 @@ onBeforeUnmount(() => {
   &__step-name
     grid-area: name
     align-self: center
+    margin: 0 !important
 
   &__step-description
     grid-area: description
+
+    // pc
+    @media(min-width: 1000px)
+      margin-top: 8px
+
+    // mobile
+    @media(max-width: 1000px)
+      margin-top: 16px
 
   &__line
     flex-grow: 1
@@ -235,6 +254,10 @@ onBeforeUnmount(() => {
     stroke: #25252566
     stroke-width: 10px
     align-self: flex-end
+
+    // mobile
+    @media(max-width: 1000px)
+      display: none
 
     &:first-child
       transform: scaleX(-1)

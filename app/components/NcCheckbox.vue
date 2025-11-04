@@ -70,15 +70,13 @@ defineEmits<{
   gap: 12px
   cursor: pointer
   user-select: none
-  font-size: 16px
-  line-height: 1.4
-  color: var(--text-color)
+  line-height: 22px
   transition-property: background-color, border-color
   transition-duration: 200ms
   transition-timing-function: ease
   border: 3px transparent solid
-  padding: 10px 20px
-  border-radius: 20px
+  padding: 10px 16px
+  border-radius: 16px
 
   &:hover
     background: #25252566

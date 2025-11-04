@@ -1,5 +1,5 @@
 <template>
-  <footer class="nc-footer__wrapper">
+  <footer class="nc-footer__wrapper" id="footer">
     <div class="nc-footer">
       <div class="nc-footer__logo">
         НейроКластер
@@ -49,27 +49,31 @@
             Контакты
           </div>
 
-<!--          TODO: иконки-->
-
           <a
             class="nc-footer__link nc-footer__link--primary"
             href="mailto:dom@neuro-cluster.com"
           >
-            dom@neuro-cluster.com
+            <img src="/icons/mail.svg" alt="mail-icon"/>
+
+            <span>dom@neuro-cluster.com</span>
           </a>
 
           <a
             class="nc-footer__link nc-footer__link--primary"
             href="https://t.me/neuro_cluster_bot"
           >
-            @neuro_cluster_bot
+            <img src="/icons/telegram.svg" alt="telegram-icon"/>
+
+            <span>@neuro_cluster_bot</span>
           </a>
 
           <a
             class="nc-footer__link nc-footer__link--primary"
             href="tel:+79956982820"
           >
-            +7 (995) 698-28-20
+            <img src="/icons/phone.svg" alt="phone-icon"/>
+
+            <span>+7 (995) 698-28-20</span>
           </a>
         </div>
       </div>
@@ -85,13 +89,20 @@
 
 <style lang="sass">
 .nc-footer
-  padding: 32px 8px
+  padding: 32px 16px
   margin: auto
   width: var(--layout-content-width)
   gap: 16px
   display: grid
-  grid-template-areas: 'logo business-content' 'legal-content business-content'
-  grid-template-columns: auto max-content
+
+  // pc
+  @media(min-width: 1000px)
+    grid-template-areas: 'logo business-content' 'legal-content business-content'
+    grid-template-columns: auto max-content
+
+  // mobile
+  @media(max-width: 1000px)
+    grid-template-areas: 'logo' 'business-content' 'legal-content'
 
   &__wrapper
     border-top: 3px #00181B solid
@@ -110,11 +121,21 @@
     grid-area: legal-content
     align-self: end
     display: flex
+    flex-wrap: wrap
 
   &__business-content
     grid-area: business-content
     display: flex
-    gap: 32px
+
+    // pc
+    @media(min-width: 1000px)
+      flex-direction: column
+      gap: 32px
+
+    // mobile
+    @media(max-width: 1000px)
+      flex-direction: column
+      gap: 16px
 
   &__content-header
     font-weight: bold
@@ -125,9 +146,11 @@
     color: #545454
     transition: color .2s ease
     padding: 4px
+    display: inline-flex
+    gap: 8px
 
     &--primary
-      color: #ACACAC
+      color: var(--text-color-secondary)
 
     &:hover:not(&--pseudo)
       color: var(--text-color)

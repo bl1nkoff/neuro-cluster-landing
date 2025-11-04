@@ -32,6 +32,7 @@ html
 
 body
   --text-color: #E7E7E7
+  --text-color-secondary: #ACACAC
   --background-color: #000203
 
   background: var(--background-color)

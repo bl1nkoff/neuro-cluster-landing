@@ -103,9 +103,9 @@ onMounted(
   resize: none
   outline: none
   -webkit-appearance: none
-  padding: 24px
+  padding: 16px
   //padding: 8px 16px 16px
-  font-size: 20px
+  font-size: 16px
 
   &--multiline
     max-height: 350px
@@ -114,7 +114,7 @@ onMounted(
   &__wrapper
     display: flex
     //border: variables.$xs solid black
-    border-radius: 20px
+    border-radius: 16px
     background: #25252533
     transition-property: background-color, border-color
     transition-duration: 200ms

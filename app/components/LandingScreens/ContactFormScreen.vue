@@ -72,21 +72,20 @@
         <nc-checkbox
           v-model="form.personalDataProcessingApproval"
           :error="invalidFormFields.includes('personalDataProcessingApproval')"
-        >
-          <template #label>
-            Отправляя форму, вы принимаете правила
-            <a href="/legal/privacy-policy">Политики конфиденциальности</a>
-            и
-            <a href="/legal/user-agreement">Пользовательского соглашения</a>
-          </template>
-        </nc-checkbox>
+          class="ls-contact-form-screen__pd-checkbox"
+          label="Согласие на обработку персональных данных"
+        />
+
+        <div class="ls-contact-form-screen__legal-footer">
+          <span>Отправляя форму, вы принимаете правила</span> <a href="/legal/privacy-policy" class="ls-contact-form-screen__legal-footer-link" target="_blank">Политики конфиденциальности</a> <span>и</span> <a href="/legal/user-agreement" class="ls-contact-form-screen__legal-footer-link" target="_blank">Пользовательского соглашения</a>
+        </div>
       </div>
 
       <div
         v-show="invalidFormFields.length"
         class="ls-contact-form-screen__form-error"
       >
-        Подсветили в форме ошибки
+        Подсветили ошибки в форме
       </div>
 
       <button
@@ -189,8 +188,11 @@ function resetForm(): void {
 <style lang="sass">
 .ls-contact-form-screen
   display: grid
-  grid-template-columns: repeat(2, 1fr)
   gap: 24px
+
+  // pc
+  @media(min-width: 1000px)
+    grid-template-columns: repeat(2, 1fr)
 
   &__card
     padding: 32px 20px
@@ -216,6 +218,25 @@ function resetForm(): void {
     display: flex
     flex-direction: column
     gap: 8px
+
+  &__pd-checkbox,
+  &__legal-footer
+    color: var(--text-color-secondary)
+    font-size: 14px
+
+  &__legal-footer
+    padding: 0 16px
+    margin-left: 36px
+    font-size: 14px
+
+  &__legal-footer-link
+    color: #4978D5
+    padding: 4px
+    border-radius: 8px
+    transition: color 200ms ease
+
+    &:hover
+      color: #5091f2
 
   &__form-submit
     border-radius: 20px

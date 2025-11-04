@@ -75,7 +75,10 @@
 <style lang="sass">
 .ls-advantages-screen
   display: grid
-  grid-template-columns: repeat(2, 1fr)
   gap: 32px
-  color: #ACACAC
+  color: var(--text-color-secondary)
+
+  // pc
+  @media(min-width: 1000px)
+    grid-template-columns: repeat(2, 1fr)
 </style>

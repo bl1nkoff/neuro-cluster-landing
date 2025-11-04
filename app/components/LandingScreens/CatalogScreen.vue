@@ -224,6 +224,33 @@ const router = useRouter()
 function selectProductCode(productCode: PRODUCT_CODES) {
   selectedProductCode.value = productCode
 
+  const newHash = '#catalog-screen'
+
+  const currentQueryParams = window.location.search
+    .replace(
+      /^\?/,
+      ''
+    )
+
+  const newQueryParams = new URLSearchParams(currentQueryParams)
+
+  newQueryParams.set(PRODUCT_QUERY_CODE, productCode)
+
+  // Изменяем хеш БЕЗ прокрутки
+  if (
+    currentQueryParams !== newQueryParams.toString()
+    || window.location.hash !== newHash
+  ) {
+    // Сохраняем текущую позицию скролла
+    const scrollY = window.scrollY
+
+    // Меняем хеш через history.replaceState — это не вызывает прокрутку
+    history.replaceState(null, '', newQueryParams.toString() + newHash)
+
+    // Восстанавливаем позицию скролла (на всякий случай, хоть и не должен сбрасываться)
+    window.scrollTo(window.scrollX, scrollY)
+  }
+
   router
     .push(
       {
@@ -243,19 +270,26 @@ function selectProductCode(productCode: PRODUCT_CODES) {
   display: flex
   gap: 32px
 
+  // mobile
+  @media(max-width: 1000px)
+    flex-direction: column
+
   &__product-list
     display: flex
     flex-direction: column
     gap: 24px
-    width: 600px
     flex-shrink: 0
+
+    // pc
+    @media(min-width: 1000px)
+      width: 600px
 
   &__product
     font: inherit
     font-size: 24px
     text-align: left
     background: #25252566
-    color: #ACACAC
+    color: var(--text-color-secondary)
     border: 3px solid transparent
     border-radius: 16px
     padding: 16px
@@ -273,7 +307,7 @@ function selectProductCode(productCode: PRODUCT_CODES) {
       border-color: var(--text-color)
 
     &:hover:not(&--selected)
-      border-color: #ACACAC
+      border-color: var(--text-color-secondary)
 
   &__product-icon
     position: relative
@@ -297,7 +331,7 @@ function selectProductCode(productCode: PRODUCT_CODES) {
       width: 50px
       border-style: solid
       border-width: 3px
-      border-color: #ACACAC
+      border-color: var(--text-color-secondary)
       border-radius: 10px
       transition-property: border-color, color
       transition-duration: 200ms
@@ -318,7 +352,11 @@ function selectProductCode(productCode: PRODUCT_CODES) {
   &__product-description
     flex-grow: 1
     font-size: 20px
-    padding: 110px 20px 20px
+    padding: 20px
+
+    // pc
+    @media(min-width: 1000px)
+      padding-top: 110px
 
   &__button
     display: block

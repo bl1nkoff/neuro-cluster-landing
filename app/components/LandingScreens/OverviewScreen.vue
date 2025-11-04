@@ -64,19 +64,32 @@
     gap: 32px
     align-items: center
 
+    // mobile
+    @media(max-width: 1000px)
+      flex-direction: column
+
   &__description
-    color: #ACACAC
+    color: var(--text-color-secondary)
     font-size: 24px
 
   &__image
-    height: 275px
+    // pc
+    @media(min-width: 1000px)
+      height: 275px
+
+    // mobile
+    @media(max-width: 1000px)
+      width: 100%
 
   &__cards
     display: grid
-    grid-template-columns: repeat(3, 1fr)
     gap: 32px
     justify-items: stretch
-    color: #ACACAC
+    color: var(--text-color-secondary)
+
+    // pc
+    @media(min-width: 1000px)
+      grid-template-columns: repeat(3, 1fr)
 
   &__card
     flex-grow: 1

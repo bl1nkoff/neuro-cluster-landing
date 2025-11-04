@@ -11,7 +11,24 @@
         НейроКластер
       </a>
 
-      <nav class="nc-header__nav-bar">
+      <button
+        @click="toggleNavbarOpen()"
+        class="nc-header__navbar-toggler"
+      >
+        <img
+          :src="isNavbarOpen ? '/icons/close.svg' : '/icons/menu.svg'"
+          alt="menu-icon"
+          class="nc-header__navbar-toggler-icon"
+        />
+      </button>
+
+      <nav
+        class="nc-header__navbar"
+        :class="{
+          'nc-header__navbar--opened': isNavbarOpen,
+          'nc-header__navbar--closed': !isNavbarOpen,
+        }"
+      >
         <a
           href="/#catalog-screen"
           class="nc-header-button"
@@ -41,7 +58,7 @@
         </a>
 
         <a
-          href="/"
+          href="#footer"
           class="nc-header-button"
         >
           Контакты
@@ -100,16 +117,30 @@ onBeforeUnmount(() => {
     resizeObserver.disconnect()
   }
 })
+
+const isNavbarOpen: Ref<boolean> = ref(false)
+
+function toggleNavbarOpen (value?: boolean): void {
+  isNavbarOpen.value = value ?? !isNavbarOpen.value
+}
 </script>
 
 <style lang="sass">
 .nc-header
-  padding: 16px 8px
+  padding: 16px
   margin: auto
   width: var(--layout-content-width)
-  display: flex
   justify-content: space-between
   align-items: center
+  display: grid
+
+  // pc
+  @media(min-width: 1000px)
+    grid-template-areas: 'logo navbar'
+
+  // mobile
+  @media(max-width: 1000px)
+    grid-template-areas: 'logo navbar-toggler' 'navbar navbar'
 
   &__wrapper
     border-bottom: 3px #00181B solid
@@ -119,9 +150,37 @@ onBeforeUnmount(() => {
     background: var(--background-color)
 
   &__logo
+    grid-area: logo
     color: inherit
     font-size: 32px
     font-weight: bold
+
+  &__navbar
+    grid-area: navbar
+
+    // mobile
+    @media(max-width: 1000px)
+      display: flex
+      flex-direction: column
+      margin-top: 16px
+
+    &--closed
+      // mobile
+      @media(max-width: 1000px)
+        display: none
+        position: absolute
+
+  &__navbar-toggler
+    grid-area: navbar-toggler
+    background: none
+    border: none
+
+    // pc
+    @media(min-width: 1000px)
+      display: none
+
+  &__navbar-toggler-icon
+    height: 24px
 
 .nc-header-button
   padding: 8px 16px
@@ -129,7 +188,16 @@ onBeforeUnmount(() => {
   transition-timing-function: ease
   transition-duration: 0.2s
   transition-property: color, border-color
-  color: #ACACAC
+  color: var(--text-color-secondary)
+
+  // pc
+  @media(min-width: 1000px)
+    padding: 8px 16px
+
+  // mobile
+  @media(max-width: 1000px)
+    padding: 8px 16px
+    font-size: 20px
 
   &:hover
     color: var(--text-color)
