@@ -24,7 +24,7 @@ if [ "$NEED_TO_BUILD" = true ]; then
   echo ""
   echo "========================="
 
-  npm run generate
+  npm run build
 fi
 
 
