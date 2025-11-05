@@ -119,8 +119,8 @@ defineEmits<{
 
   &:has(&__input:checked)
     .nc-checkbox__custom
-      background: linear-gradient(to right, #062259 0%, #053AA2 100%)
-      border-color: #062259
+      background: var(--primary-button-backgound)
+      border-color: var(--text-color-secondary)
 
 
     .nc-checkbox__check-icon
