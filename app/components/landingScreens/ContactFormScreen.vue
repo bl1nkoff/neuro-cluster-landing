@@ -241,7 +241,7 @@ function resetForm(): void {
   &__card
     grid-area: card
     padding: 32px 20px
-    background: linear-gradient(to right, #2525257F, #1212127F)
+    background: linear-gradient(to right, #2525257F, #1111117F)
 
   &__card-header
     font-weight: bold
@@ -264,7 +264,7 @@ function resetForm(): void {
 
   &__contacts-card
     grid-area: contacts-card
-    background: linear-gradient(to right, #2525257F, #1212127F)
+    background: linear-gradient(to right, #2525257F, #1111117F)
 
   &__contacts
     display: flex

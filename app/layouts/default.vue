@@ -16,7 +16,7 @@
 <style lang="sass">
 .nc-layout
   min-height: 100vh
-  background: url(/background.png) repeat-y
+  background: url(/background-5.png) repeat-y
   background-size: 450px
 
   // mobile

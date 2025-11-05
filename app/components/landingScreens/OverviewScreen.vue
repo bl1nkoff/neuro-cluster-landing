@@ -12,7 +12,7 @@
 
       <img
         class="ls-overview-screen__image"
-        src="/overview-image.png"
+        src="/overview-image-5.png"
         alt="overview-image"
       />
     </div>

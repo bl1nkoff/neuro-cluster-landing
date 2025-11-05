@@ -4,7 +4,7 @@
     header="Почему нам доверяют внедрение ИИ"
     id="advantages-screen"
   >
-    <div class="nc-card">
+    <div class="nc-card nc-card--horizontal">
       <div class="nc-card__header">
         Запуск за 14 дней, а не за полгода
       </div>
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="nc-card">
+    <div class="nc-card nc-card--horizontal">
       <div class="nc-card__header">
         Прозрачный ROI и 30+ метрик в личном кабинете
       </div>
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="nc-card">
+    <div class="nc-card nc-card--horizontal">
       <div class="nc-card__header">
         Команда с опытом 120+ внедрений
       </div>
@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <div class="nc-card">
+    <div class="nc-card nc-card--horizontal">
       <div class="nc-card__header">
         Своя ИИ-платформа: 20% экономии, х10 гибкости
       </div>
@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <div class="nc-card">
+    <div class="nc-card nc-card--horizontal">
       <div class="nc-card__header">
         Полная интеграция с 200+ системами
       </div>
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <div class="nc-card">
+    <div class="nc-card nc-card--horizontal">
       <div class="nc-card__header">
         На 90% меньше человеческих ошибок
       </div>

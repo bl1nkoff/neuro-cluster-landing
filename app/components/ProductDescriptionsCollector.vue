@@ -166,22 +166,21 @@ defineProps<
   &__product-description
     flex-grow: 1
     padding: 20px
-    background: linear-gradient(to right, #2525257F, #1212127F)
+    background: linear-gradient(to right, #1111117F, #2525257F)
 
     // pc
     @media(min-width: 1000px)
-      font-size: 20px
-      padding-top: 110px
+      padding-top: 95px
 
   &__button
     display: block
-    background: linear-gradient(to right, #062259 0%, #053AA2 100%)
+    background: linear-gradient(to left, #062259 0%, #053AA2 100%)
     border-radius: 20px
     text-align: center
 
     // pc
     @media(min-width: 1000px)
-      padding: 30px
+      padding: 22px
       font-size: 24px
 
     // mobile

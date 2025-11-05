@@ -10,7 +10,7 @@
       </h1>
 
       <div class="ls-welcome-screen__description">
-        Создаем, внедряем и управляем нейро-сотрудниками, чтобы убрать рутину, снизить расходы, роботизировать процессы с помощью ИИ платформы «НейроКластер»
+        Создаем, внедряем и управляем нейро-сотрудниками, чтобы убрать рутину, снизить расходы, роботизировать процессы с помощью ИИ-платформы «НейроКластер»
       </div>
 
       <a
@@ -23,7 +23,7 @@
 
     <img
       class="ls-welcome-screen__image"
-      src="/welcome-image.png"
+      src="/welcome-image-5.png"
       alt="welcome-image"
     />
   </landing-screen>
@@ -80,10 +80,10 @@
     border-radius: 8px
     font-size: 24px
     font-weight: bold
-    padding: 24px
+    padding: 20px
     color: var(--text-color)
     text-align: center
-    background: linear-gradient(to right, #0622597F 0%, #053AA27F 100%)
+    background: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
 
     // pc
     @media(min-width: 1000px)

@@ -33,7 +33,7 @@ html
 body
   --text-color: #E7E7E7
   --text-color-secondary: #ACACAC
-  --background-color: #000203
+  --background-color: #000001
 
   --primary: #04264D
   --primary-50: #04264D7F
@@ -54,7 +54,7 @@ ul, ol
 
 .nc-card
   //background: #25252566
-  background: linear-gradient(to bottom, #2525257F, #1212127F)
+  background: linear-gradient(to bottom, #2525257F, #1111117F)
   padding: 20px
   border-radius: 20px
   transition: color .2s ease
@@ -62,8 +62,15 @@ ul, ol
   &:hover
     color: var(--text-color)
 
+  &--horizontal
+    background: linear-gradient(to right, #2525257F, #1111117F)
+
+  &--horizontal-rev
+    background: linear-gradient(to left, #2525257F, #1111117F)
+
   &__header
     margin-bottom: 16px
+    font-weight: bold
 
     &:not(:first-child)
       margin-top: 24px

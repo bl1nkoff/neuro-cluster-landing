@@ -166,17 +166,18 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     text-align: left
     background: #25252566
     color: var(--text-color-secondary)
-    border: 3px solid transparent
+    border: 0 solid transparent
     border-radius: 16px
     padding: 8px 16px
     cursor: pointer
-    transition-property: border-color, color
+    transition-property: border-color, color, border-width
     transition-duration: 200ms
     transition-timing-function: ease
     display: flex
     flex-wrap: nowrap
     gap: 20px
     align-items: center
+    background: linear-gradient(to left, #1111117F, #2525257F)
 
     // pc
     @media(min-width: 1000px)
@@ -189,6 +190,7 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     &--selected
       color: var(--text-color)
       border-color: var(--text-color)
+      border-width: 3px
 
     &:hover:not(&--selected)
       border-color: var(--text-color-secondary)
