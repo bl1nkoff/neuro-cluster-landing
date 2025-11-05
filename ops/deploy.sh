@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+source "$(dirname "$0")/../.env"
+source "$(dirname "$0")/../.env.production"
+source "$(dirname "$0")/../.env.credentials"
+
 # === Проверяем аргументы ===
 #NEED_TO_BUILD=false
 DEPLOY_GUI=false

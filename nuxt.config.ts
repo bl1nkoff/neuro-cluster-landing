@@ -35,7 +35,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      nodeEnv: process.env.nodeEnv || 'NO_NODE_ENV',
+      nodeEnv: process.env.NODE_ENV || 'NO_NODE_ENV',
       YANDEX_METRIKA_TAG_ID: process.env.YANDEX_METRIKA_TAG_ID,
     }
   },
