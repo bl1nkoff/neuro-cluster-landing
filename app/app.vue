@@ -36,6 +36,8 @@ body
   --background-color: #000203
 
   --primary: #04264D
+  --primary-50: #04264D7F
+  --primary-75: #04264DBF
 
   background: var(--background-color)
   color: var(--text-color)
@@ -64,7 +66,7 @@ ul, ol
     margin-bottom: 16px
 
     &:not(:first-child)
-      margin-top: 16px
+      margin-top: 24px
 
     // pc
     @media(min-width: 1000px)

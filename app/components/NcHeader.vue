@@ -153,7 +153,7 @@ function onNavLinkClick(): void {
     grid-template-areas: 'logo navbar-toggler' 'navbar navbar'
 
   &__wrapper
-    border-bottom: 3px var(--primary) solid
+    border-bottom: 3px var(--primary-75) solid
     //border-bottom: 3px var(--text-color) solid
     position: sticky
     top: 0
@@ -163,8 +163,15 @@ function onNavLinkClick(): void {
   &__logo
     grid-area: logo
     color: inherit
-    font-size: 32px
     font-weight: bold
+
+    // pc
+    @media(min-width: 1000px)
+      font-size: 32px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 24px
 
   &__navbar
     grid-area: navbar
@@ -191,7 +198,13 @@ function onNavLinkClick(): void {
       display: none
 
   &__navbar-toggler-icon
-    height: 24px
+    // pc
+    @media(min-width: 1000px)
+      height: 24px
+
+    // mobile
+    @media(max-width: 1000px)
+      height: 20px
 
 .nc-navbar-link
   display: inline-block

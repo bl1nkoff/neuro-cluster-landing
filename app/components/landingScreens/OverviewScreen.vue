@@ -71,7 +71,7 @@
     color: var(--text-color-secondary)
 
     // pc
-    @media(max-width: 1000px)
+    @media(min-width: 1000px)
       font-size: 24px
 
     // mobile

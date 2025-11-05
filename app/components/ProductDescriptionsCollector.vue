@@ -166,6 +166,7 @@ defineProps<
   &__product-description
     flex-grow: 1
     padding: 20px
+    background: linear-gradient(to right, #2525257F, #1212127F)
 
     // pc
     @media(min-width: 1000px)

@@ -168,7 +168,7 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     color: var(--text-color-secondary)
     border: 3px solid transparent
     border-radius: 16px
-    padding: 16px
+    padding: 8px 16px
     cursor: pointer
     transition-property: border-color, color
     transition-duration: 200ms

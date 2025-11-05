@@ -105,13 +105,21 @@
     grid-template-areas: 'logo' 'business-content' 'legal-content'
 
   &__wrapper
-    border-top: 3px var(--primary) solid
+    border-top: 3px var(--primary-50) solid
+    background: var(--background-color)
 
   &__logo
     color: inherit
-    font-size: 32px
     font-weight: bold
     grid-area: logo
+
+    // pc
+    @media(min-width: 1000px)
+      font-size: 32px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 24px
 
   &__content-column
     display: flex

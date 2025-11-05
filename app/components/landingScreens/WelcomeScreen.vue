@@ -42,6 +42,9 @@
   position: relative
   overflow: hidden
 
+  &__content
+    width: 100%
+
   &__info
     display: flex
     flex-direction: column
@@ -65,8 +68,9 @@
 
     // pc
     @media(min-width: 1000px)
-      max-width: 66%
       font-size: 24px
+      width: 100%
+      max-width: 700px
 
     // mobile
     @media(max-width: 1000px)
@@ -79,7 +83,7 @@
     padding: 24px
     color: var(--text-color)
     text-align: center
-    background: linear-gradient(to right, #062259 0%, #053AA2 100%)
+    background: linear-gradient(to right, #0622597F 0%, #053AA27F 100%)
 
     // pc
     @media(min-width: 1000px)

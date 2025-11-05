@@ -12,16 +12,21 @@
         <p>Мы покажем как работает платформа «НейроКластер», разберем ваши бизнес-задачи, и расскажем как
           нейро-сотрудник сможет их решить
         </p>
+      </div>
 
+      <div class="nc-card__header">
+        На 30-минутной онлайн встрече вы увидите:
+      </div>
 
-        <p>На 30-минутной онлайн встрече вы увидите:</p>
-
+      <div class="nc-card__content ls-contact-form-screen__card-content">
         <ul>
+          <li>Насколько ИИ способен решить ваши задачи</li>
           <li>Как работает нейро-сотрудник на реальном примере</li>
-          <li>Как быстро запустить и настроить ИИ под ваши цели</li>
+          <li>Как быстро запустить и настроить его под ваши цели</li>
           <li>Как оценить эффективность, результаты и ROI</li>
           <li>Как управлять расходами с точностью до копейки</li>
-          <li>С чего начать внедрение ИИ в ваших условиях</li>
+          <li>С чего начать внедрение в ваших условиях</li>
+          <li>Сколько стоит и насколько быстро окупается ИИ</li>
         </ul>
       </div>
     </div>
@@ -236,6 +241,7 @@ function resetForm(): void {
   &__card
     grid-area: card
     padding: 32px 20px
+    background: linear-gradient(to right, #2525257F, #1212127F)
 
   &__card-header
     font-weight: bold
@@ -243,7 +249,7 @@ function resetForm(): void {
     // pc
     @media(min-width: 1000px)
       font-size: 32px
-      margin-bottom: 32px
+      margin-bottom: 24px
 
     // mobile
     @media(max-width: 1000px)
@@ -254,13 +260,11 @@ function resetForm(): void {
     display: flex
     flex-direction: column
     gap: 32px
-
-    // pc
-    @media(min-width: 1000px)
-      font-size: 20px
+    color: var(--text-color)
 
   &__contacts-card
     grid-area: contacts-card
+    background: linear-gradient(to right, #2525257F, #1212127F)
 
   &__contacts
     display: flex
