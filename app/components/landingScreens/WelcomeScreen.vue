@@ -23,7 +23,7 @@
 
     <img
       class="ls-welcome-screen__image"
-      src="/welcome-image-6.svg"
+      src="/welcome-image-7.svg"
       alt="welcome-image"
     />
   </landing-screen>
@@ -92,7 +92,7 @@
     padding: 20px
     color: var(--text-color)
     text-align: center
-    background: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
+    background: var(--primary-button-backgound)
 
     // pc
     @media(min-width: 1000px)
@@ -111,6 +111,7 @@
     padding: 50px
     top: 0
     object-fit: cover
+    opacity: .5
 
     // pc
     @media(min-width: 1000px)

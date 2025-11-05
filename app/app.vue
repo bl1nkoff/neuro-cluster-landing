@@ -34,10 +34,15 @@ body
   --text-color: #E7E7E7
   --text-color-secondary: #ACACAC
   --background-color: #000203
+  --background-color--50: #0002037F
 
-  --primary: #04264D
+  //--primary: #04264D
+  --primary: var(--text-color-secondary)
   --primary-50: #04264D7F
   --primary-75: #04264DBF
+
+  //--primary-button-backgound: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
+  --primary-button-backgound: linear-gradient(to left, #5959597F 0%, #A3A3A37F 100%)
 
   background: var(--background-color)
   color: var(--text-color)

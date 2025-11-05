@@ -105,7 +105,7 @@
     grid-template-areas: 'logo' 'business-content' 'legal-content'
 
   &__wrapper
-    border-top: 3px var(--primary-50) solid
+    //border-top: 3px var(--primary-50) solid
     background: var(--background-color)
 
   &__logo

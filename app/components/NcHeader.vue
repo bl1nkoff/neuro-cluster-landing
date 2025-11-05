@@ -153,12 +153,13 @@ function onNavLinkClick(): void {
     grid-template-areas: 'logo navbar-toggler' 'navbar navbar'
 
   &__wrapper
-    border-bottom: 3px var(--primary-75) solid
+    //border-bottom: 3px var(--primary-75) solid
     //border-bottom: 3px var(--text-color) solid
     position: sticky
     top: 0
     z-index: 100
-    background: var(--background-color)
+    background: var(--background-color--50)
+    backdrop-filter: blur(16px)
 
   &__logo
     grid-area: logo

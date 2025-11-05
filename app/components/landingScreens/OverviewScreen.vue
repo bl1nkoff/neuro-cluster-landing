@@ -12,7 +12,7 @@
 
       <img
         class="ls-overview-screen__image"
-        src="/test-1.svg"
+        src="/overview-image-6.svg"
         alt="overview-image"
       />
     </div>
@@ -79,6 +79,8 @@
       font-size: 20px
 
   &__image
+    opacity: .5
+
     // pc
     @media(min-width: 1000px)
       height: 250px

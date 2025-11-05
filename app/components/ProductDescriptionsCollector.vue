@@ -173,7 +173,7 @@ defineProps<
 
   &__button
     display: block
-    background: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
+    background: var(--primary-button-backgound)
     border-radius: 20px
     text-align: center
 

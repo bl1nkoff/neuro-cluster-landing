@@ -117,7 +117,7 @@
         />
 
         <div class="ls-contact-form-screen__legal-footer">
-          <span>Отправляя форму, вы принимаете правила</span> <a href="/legal/privacy-policy" class="ls-contact-form-screen__legal-footer-link" target="_blank">Политики конфиденциальности</a> <span>и</span> <a href="/legal/user-agreement" class="ls-contact-form-screen__legal-footer-link" target="_blank">Пользовательского соглашения</a>
+          <span>Отправляя форму, вы принимаете правила</span> <a href="/legal/privacy-policy" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Политики конфиденциальности</a> <span>и</span> <a href="/legal/user-agreement" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Пользовательского соглашения</a>
         </div>
       </div>
 
@@ -307,22 +307,19 @@ function resetForm(): void {
     padding: 0 16px
     margin-left: 36px
     font-size: 14px
+    line-height: 1.4em
 
   &__legal-footer-link
-    color: #4978D5
+    color: var(--text-color)
     padding: 4px
     border-radius: 8px
-    transition: color 200ms ease
-
-    &:hover
-      color: #5091f2
 
   &__form-submit
     border-radius: 20px
     font-weight: bold
     color: var(--text-color)
     text-align: center
-    background: linear-gradient(to right, #062259 0%, #053AA2 100%)
+    background: var(--primary-button-backgound)
     border: none
 
     // pc
