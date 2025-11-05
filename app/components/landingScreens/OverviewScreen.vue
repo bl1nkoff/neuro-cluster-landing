@@ -82,10 +82,12 @@
     // pc
     @media(min-width: 1000px)
       height: 250px
+      margin-right: 64px
 
     // mobile
     @media(max-width: 1000px)
-      width: 100%
+      display: none
+      //width: 100%
 
   &__cards
     display: grid
@@ -95,6 +97,11 @@
     // pc
     @media(min-width: 1000px)
       grid-template-columns: repeat(3, 1fr)
+      gap: 32px
+
+    // mobile
+    @media(max-width: 1000px)
+      gap: 16px
 
   &__card
     flex-grow: 1

@@ -182,10 +182,12 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     // pc
     @media(min-width: 1000px)
       font-size: 24px
+      padding: 8px 16px
 
     // mobile
     @media(max-width: 1000px)
       font-size: 20px
+      padding: 8px
 
     &--selected
       color: var(--text-color)

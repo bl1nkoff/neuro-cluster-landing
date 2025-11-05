@@ -44,7 +44,7 @@ defineProps<
 
   // mobile
   @media(max-width: 1000px)
-    margin-bottom: 48px
+    margin-bottom: 0
 
   &__header
     font-weight: bold

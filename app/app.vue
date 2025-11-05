@@ -33,7 +33,7 @@ html
 body
   --text-color: #E7E7E7
   --text-color-secondary: #ACACAC
-  --background-color: #000001
+  --background-color: #000203
 
   --primary: #04264D
   --primary-50: #04264D7F
@@ -62,11 +62,13 @@ ul, ol
   &:hover
     color: var(--text-color)
 
-  &--horizontal
-    background: linear-gradient(to right, #2525257F, #1111117F)
+  // pc
+  @media (min-width: 1000px)
+    &--horizontal
+      background: linear-gradient(to right, #2525257F, #1111117F)
 
-  &--horizontal-rev
-    background: linear-gradient(to left, #2525257F, #1111117F)
+    &--horizontal-rev
+      background: linear-gradient(to left, #2525257F, #1111117F)
 
   &__header
     margin-bottom: 16px

@@ -36,11 +36,19 @@
 <style lang="sass">
 .ls-welcome-screen
   display: flex
-  justify-content: center
-  align-items: center
-  height: calc(100vh - var(--header-height, 0px))
   position: relative
   overflow: hidden
+
+  // pc
+  @media(min-width: 1000px)
+    align-items: center
+    justify-content: center
+    min-height: calc(100vh - var(--header-height, 0px))
+
+  // mobile
+  @media(max-width: 1000px)
+    align-items: start
+    justify-content: start
 
   &__content
     width: 100%
@@ -48,7 +56,6 @@
   &__info
     display: flex
     flex-direction: column
-    gap: 64px
     z-index: 1
     position: relative
 
@@ -57,10 +64,12 @@
 
     // pc
     @media(min-width: 1000px)
+      margin-bottom: 64px
       font-size: 64px
 
     // mobile
     @media(max-width: 1000px)
+      margin-bottom: 20px
       font-size: 32px
 
   &__description
@@ -88,17 +97,20 @@
     // pc
     @media(min-width: 1000px)
       width: 400px
+      margin-top: 64px
 
     // mobile
     @media(max-width: 1000px)
       //font-size: 36px
+      margin-top: 40px
 
   &__image
     position: absolute
-    z-index: 0
     height: 100%
-    padding: 125px 0
+    z-index: 0
+    padding: 50px
     top: 0
+    object-fit: cover
 
     // pc
     @media(min-width: 1000px)
@@ -106,5 +118,7 @@
 
     // mobile
     @media(max-width: 1000px)
-      left: 0
+      right: -40%
+      height: 75%
+      top: 10%
 </style>

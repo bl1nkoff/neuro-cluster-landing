@@ -197,6 +197,11 @@ onBeforeUnmount(() => {
     display: flex
     width: 100%
 
+    // mobile
+    @media(max-width: 1000px)
+      &:not(:last-child)
+        margin-bottom: 16px
+
     &--no-line
       // pc
       @media(min-width: 1000px)

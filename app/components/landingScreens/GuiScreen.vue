@@ -84,13 +84,17 @@ const SCREENSHOT_URL: string[] = [
 .ls-gui-screen
   &__cards
     display: grid
-    gap: 32px
     justify-items: stretch
     margin-bottom: 64px
 
     // pc
     @media(min-width: 1000px)
       grid-template-columns: repeat(3, 1fr)
+      gap: 32px
+
+    // mobile
+    @media(max-width: 1000px)
+      gap: 16px
 
   &__card
     flex-grow: 1

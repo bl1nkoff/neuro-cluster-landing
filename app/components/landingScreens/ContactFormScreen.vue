@@ -228,14 +228,15 @@ function resetForm(): void {
 <style lang="sass">
 .ls-contact-form-screen
   display: grid
-  gap: 24px
 
   // pc
   @media(min-width: 1000px)
+    gap: 24px
     grid-template-areas: 'card form' 'contacts-card form'
 
   // pc
   @media(max-width: 1000px)
+    gap: 16px
     grid-template-areas: 'card' 'contacts-card' 'form'
 
   &__card

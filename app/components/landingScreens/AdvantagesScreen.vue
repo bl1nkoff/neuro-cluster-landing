@@ -75,9 +75,13 @@
 <style lang="sass">
 .ls-advantages-screen
   display: grid
-  gap: 32px
 
   // pc
   @media(min-width: 1000px)
     grid-template-columns: repeat(2, 1fr)
+    gap: 32px
+
+  // mobile
+  @media(max-width: 1000px)
+    gap: 16px
 </style>
