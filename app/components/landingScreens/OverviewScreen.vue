@@ -69,7 +69,14 @@
 
   &__description
     color: var(--text-color-secondary)
-    font-size: 24px
+
+    // pc
+    @media(max-width: 1000px)
+      font-size: 24px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 20px
 
   &__image
     // pc

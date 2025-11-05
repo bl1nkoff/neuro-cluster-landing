@@ -58,7 +58,7 @@
 
     // mobile
     @media(max-width: 1000px)
-      font-size: 36px
+      font-size: 32px
 
   &__description
     color: var(--text-color-secondary)
@@ -70,7 +70,7 @@
 
     // mobile
     @media(max-width: 1000px)
-      font-size: 24px
+      font-size: 20px
 
   &__go-to-form
     border-radius: 8px

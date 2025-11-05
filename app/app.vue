@@ -61,11 +61,18 @@ ul, ol
     color: var(--text-color)
 
   &__header
-    font-size: 24px
     margin-bottom: 16px
 
     &:not(:first-child)
       margin-top: 16px
+
+    // pc
+    @media(min-width: 1000px)
+      font-size: 24px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 20px
 
   &__content
     font-size: 16px

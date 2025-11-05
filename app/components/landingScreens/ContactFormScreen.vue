@@ -238,15 +238,26 @@ function resetForm(): void {
     padding: 32px 20px
 
   &__card-header
-    font-size: 32px
     font-weight: bold
-    margin-bottom: 32px
+
+    // pc
+    @media(min-width: 1000px)
+      font-size: 32px
+      margin-bottom: 32px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 24px
+      margin-bottom: 24px
 
   &__card-content
     display: flex
     flex-direction: column
     gap: 32px
-    font-size: 20px
+
+    // pc
+    @media(min-width: 1000px)
+      font-size: 20px
 
   &__contacts-card
     grid-area: contacts-card
@@ -270,7 +281,14 @@ function resetForm(): void {
     display: flex
     flex-direction: column
     gap: 24px
-    padding: 32px 20px
+
+    // pc
+    @media(min-width: 1000px)
+      padding: 32px 20px
+
+    // mobile
+    @media(max-width: 1000px)
+      padding: 20px 10px
 
   &__form-inputs
     display: flex
@@ -298,13 +316,21 @@ function resetForm(): void {
 
   &__form-submit
     border-radius: 20px
-    font-size: 20px
     font-weight: bold
-    padding: 24px
     color: var(--text-color)
     text-align: center
     background: linear-gradient(to right, #062259 0%, #053AA2 100%)
     border: none
+
+    // pc
+    @media(min-width: 1000px)
+      font-size: 20px
+      padding: 24px
+
+    // mobile
+    @media(max-width: 1000px)
+      font-size: 20px
+      padding: 20px
 
   &__form-error
     padding: 20px

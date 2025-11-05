@@ -1,0 +1,11 @@
+enum PRODUCT_CODES {
+  SALES = 'SALES',
+  SUPPORT = 'SUPPORT',
+  TEACHER = 'TEACHER',
+  HR = 'HR',
+  CUSTOM = 'CUSTOM',
+}
+
+export {
+  PRODUCT_CODES,
+}

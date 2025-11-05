@@ -174,7 +174,7 @@ onMounted(() => {
 
   // Создаём ResizeObserver
   resizeObserver = new ResizeObserver(
-    (entries) => {
+    () => {
       recalculateLinePath()
     }
   )
@@ -226,6 +226,14 @@ onBeforeUnmount(() => {
     grid-area: number
     margin-right: 16px
     transition: transform 0.2s ease
+
+    // pc
+    @media(min-width: 1000px)
+      height: 48px
+
+    // mobile
+    @media(max-width: 1000px)
+      height: 36px
 
   &__step-name
     grid-area: name

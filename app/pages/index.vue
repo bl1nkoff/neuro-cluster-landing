@@ -22,13 +22,13 @@
 <script setup lang="ts">
 import { type Ref } from 'vue'
 
-import WelcomeScreen from '~/components/LandingScreens/WelcomeScreen.vue'
-import OverviewScreen from '~/components/LandingScreens/OverviewScreen.vue'
-import CatalogScreen from '~/components/LandingScreens/CatalogScreen.vue'
-import RoadmapScreen from '~/components/LandingScreens/RoadmapScreen.vue'
-import GuiScreen from '~/components/LandingScreens/GuiScreen.vue'
-import AdvantagesScreen from '~/components/LandingScreens/AdvantagesScreen.vue'
-import ContactFormScreen from '~/components/LandingScreens/ContactFormScreen.vue'
+import WelcomeScreen from '~/components/landingScreens/WelcomeScreen.vue'
+import OverviewScreen from '~/components/landingScreens/OverviewScreen.vue'
+import CatalogScreen from '~/components/landingScreens/CatalogScreen.vue'
+import RoadmapScreen from '~/components/landingScreens/RoadmapScreen.vue'
+import GuiScreen from '~/components/landingScreens/GuiScreen.vue'
+import AdvantagesScreen from '~/components/landingScreens/AdvantagesScreen.vue'
+import ContactFormScreen from '~/components/landingScreens/ContactFormScreen.vue'
 import {debounce} from "~~/utils"
 
 const indexPageRef: Ref<HTMLElement | undefined> = ref(undefined)

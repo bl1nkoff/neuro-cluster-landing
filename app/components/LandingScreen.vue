@@ -48,14 +48,15 @@ defineProps<
 
   &__header
     font-weight: bold
-    margin-bottom: 64px
 
     // pc
     @media(min-width: 1000px)
       font-size: 48px
+      margin-bottom: 64px
 
     // mobile
     @media(max-width: 1000px)
-      font-size: 32px
+      font-size: 24px
+      margin-bottom: 24px
 
 </style>
