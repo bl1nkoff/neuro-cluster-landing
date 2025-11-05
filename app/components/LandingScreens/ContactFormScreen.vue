@@ -33,7 +33,7 @@
 
       <div class="nc-card__content ls-contact-form-screen__contacts">
         <a
-          class="nc-footer__link nc-footer__link--primary"
+          class="ls-contact-form-screen__contact-link"
           href="mailto:dom@neuro-cluster.com"
         >
           <img src="/icons/mail.svg" alt="mail-icon"/>
@@ -42,7 +42,7 @@
         </a>
 
         <a
-          class="nc-footer__link nc-footer__link--primary"
+          class="ls-contact-form-screen__contact-link"
           href="https://t.me/neuro_cluster_bot"
         >
           <img src="/icons/telegram.svg" alt="telegram-icon"/>
@@ -51,7 +51,7 @@
         </a>
 
         <a
-          class="nc-footer__link nc-footer__link--primary"
+          class="ls-contact-form-screen__contact-link"
           href="tel:+79956982820"
         >
           <img src="/icons/phone.svg" alt="phone-icon"/>
@@ -254,6 +254,16 @@ function resetForm(): void {
   &__contacts
     display: flex
     flex-direction: column
+
+  &__contact-link
+    color: var(--text-color-secondary)
+    transition: color .2s ease
+    padding: 8px 4px
+    display: inline-flex
+    gap: 8px
+
+    &:hover
+      color: var(--text-color)
 
   &__form
     grid-area: form
