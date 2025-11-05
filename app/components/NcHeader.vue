@@ -31,42 +31,48 @@
       >
         <a
           href="/#catalog-screen"
-          class="nc-header-button"
+          class="nc-navbar-link"
+          @click="onNavLinkClick()"
         >
           Нейро-сотрудники
         </a>
 
         <a
           href="/#roadmap-screen"
-          class="nc-header-button"
+          class="nc-navbar-link"
+          @click="onNavLinkClick()"
         >
           План внедрения
         </a>
 
         <a
           href="/#gui-screen"
-          class="nc-header-button"
+          class="nc-navbar-link"
+          @click="onNavLinkClick()"
         >
           Интерфейс
         </a>
 
         <a
           href="/#advantages-screen"
-          class="nc-header-button"
+          class="nc-navbar-link"
+          @click="onNavLinkClick()"
         >
           Преимущества
         </a>
 
         <a
           href="#footer"
-          class="nc-header-button"
+          class="nc-navbar-link"
+          @click="onNavLinkClick()"
         >
           Контакты
         </a>
 
         <a
           href="/#contact-form-screen"
-          class="nc-header-button nc-header-button--outline"
+          class="nc-navbar-link nc-navbar-link--outline"
+          @click="onNavLinkClick()"
         >
           Демо
         </a>
@@ -122,6 +128,10 @@ const isNavbarOpen: Ref<boolean> = ref(false)
 
 function toggleNavbarOpen (value?: boolean): void {
   isNavbarOpen.value = value ?? !isNavbarOpen.value
+}
+
+function onNavLinkClick(): void {
+  toggleNavbarOpen(false)
 }
 </script>
 
@@ -183,7 +193,7 @@ function toggleNavbarOpen (value?: boolean): void {
   &__navbar-toggler-icon
     height: 24px
 
-.nc-header-button
+.nc-navbar-link
   display: inline-block
   padding: 8px 16px
   border-radius: 8px

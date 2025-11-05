@@ -9,14 +9,12 @@ function validateForm (contact: ContactForm): string[] {
     errors.push('name')
   }
 
-  if (!contact.phone) {
-    const normalizedPhone = normalizePhoneNumber(contact.phone)
+  const normalizedPhone = normalizePhoneNumber(contact.phone)
 
-    if (
-      typeof normalizedPhone !== 'string'
-    ) {
-      errors.push('phone')
-    }
+  if (
+    typeof normalizedPhone !== 'string'
+  ) {
+    errors.push('phone')
   }
 
   if (contact.email) {

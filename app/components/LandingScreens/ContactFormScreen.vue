@@ -229,6 +229,10 @@ function resetForm(): void {
   @media(min-width: 1000px)
     grid-template-areas: 'card form' 'contacts-card form'
 
+  // pc
+  @media(max-width: 1000px)
+    grid-template-areas: 'card' 'contacts-card' 'form'
+
   &__card
     grid-area: card
     padding: 32px 20px

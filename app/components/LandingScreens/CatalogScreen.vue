@@ -278,13 +278,17 @@ function selectProductCode(productCode: PRODUCT_CODES) {
   overflow: hidden
 
   &__content
-    display: flex
+    display: grid
     gap: 32px
     z-index: 1
 
-  // mobile
-  @media(max-width: 1000px)
-    flex-direction: column
+    // pc
+    @media(min-width: 1000px)
+      grid-template-columns: repeat(2, 1fr)
+
+    // mobile
+    @media(max-width: 1000px)
+      flex-direction: column
 
   &__product-list
     display: flex
@@ -292,10 +296,6 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     gap: 24px
     flex-shrink: 0
     position: relative
-
-    // pc
-    @media(min-width: 1000px)
-      width: 600px
 
   &__product
     font: inherit
