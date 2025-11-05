@@ -1,8 +1,8 @@
 export default defineNuxtPlugin(
   nuxtApp => {
     if (
-      process.client
-      && nuxtApp.$config.public.nodeEnv === 'PRODUCTION'
+      import.meta.client
+      && nuxtApp.$config.public.nodeEnv === 'production'
     ) {
       console.log('Яндекс метрика подключена')
 
@@ -35,7 +35,11 @@ export default defineNuxtPlugin(
       )
     }
     else {
+      console.log('=====================')
       console.log('Я.Метрика не подключена')
+      console.log(`client: ${import.meta.client}`)
+      console.log(`nuxtApp.$config.public.nodeEnv: ${nuxtApp.$config.public.nodeEnv}`)
+      console.log('=====================')
     }
   }
 )
