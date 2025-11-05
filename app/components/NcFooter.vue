@@ -60,11 +60,11 @@
 
           <a
             class="nc-footer__link nc-footer__link--primary"
-            href="https://t.me/neuro_cluster_bot"
+            href="https://t.me/dom_neuro_cluster"
           >
             <img src="/icons/telegram.svg" alt="telegram-icon"/>
 
-            <span>@neuro_cluster_bot</span>
+            <span>@dom_neuro_cluster</span>
           </a>
 
           <a
