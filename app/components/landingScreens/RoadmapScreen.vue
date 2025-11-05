@@ -8,7 +8,7 @@
       class="ls-roadmap-screen__step-row"
       ref="firstCardRef"
     >
-      <div class="ls-roadmap-screen__step nc-card">
+      <div class="ls-roadmap-screen__step nc-card nc-card--horizontal-rev">
         <img
           class="ls-roadmap-screen__step-number"
           src="/roadmap-1.svg"
@@ -56,7 +56,7 @@
         />
       </svg>
 
-      <div class="ls-roadmap-screen__step nc-card">
+      <div class="ls-roadmap-screen__step nc-card nc-card--horizontal">
         <img
           class="ls-roadmap-screen__step-number"
           src="/roadmap-2.svg"
@@ -81,7 +81,7 @@
     <div class="ls-roadmap-screen__step-row">
       <div class="ls-roadmap-screen__step nc-card">
         <img
-          class="ls-roadmap-screen__step-number"
+          class="ls-roadmap-screen__step-number nc-card--horizontal-rev"
           src="/roadmap-3.svg"
           alt="3"
         />
@@ -114,7 +114,7 @@
     </div>
 
     <div class="ls-roadmap-screen__step-row ls-roadmap-screen__step-row--no-line">
-      <div class="ls-roadmap-screen__step nc-card">
+      <div class="ls-roadmap-screen__step nc-card nc-card--horizontal">
         <img
           class="ls-roadmap-screen__step-number"
           src="/roadmap-4.svg"

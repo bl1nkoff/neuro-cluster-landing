@@ -2,7 +2,7 @@
   <div class="product-descriptions-collector__product-description-wrapper">
     <div
       v-show="!productCode || productCode === PRODUCT_CODES.SALES"
-      class="nc-card product-descriptions-collector__product-description"
+      class="nc-card nc-card--horizontal product-descriptions-collector__product-description"
     >
       <div class="nc-card__header">
         Функционал
@@ -166,7 +166,6 @@ defineProps<
   &__product-description
     flex-grow: 1
     padding: 20px
-    background: linear-gradient(to right, #1111117F, #2525257F)
 
     // pc
     @media(min-width: 1000px)
@@ -174,7 +173,7 @@ defineProps<
 
   &__button
     display: block
-    background: linear-gradient(to left, #062259 0%, #053AA2 100%)
+    background: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
     border-radius: 20px
     text-align: center
 
