@@ -307,10 +307,10 @@ function resetForm(): void {
     padding: 0 16px
     margin-left: 36px
     font-size: 14px
-    line-height: 1.4em
 
   &__legal-footer-link
-    color: var(--text-color)
+    display: inline-block
+    color: #4978D5
     padding: 4px
     border-radius: 8px
 

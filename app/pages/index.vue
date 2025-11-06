@@ -5,6 +5,8 @@
   >
     <welcome-screen/>
 
+    <div class="nc-separator nc-separator--page-separator"/>
+
     <overview-screen/>
 
     <catalog-screen/>
