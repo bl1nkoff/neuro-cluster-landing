@@ -8,6 +8,78 @@
   setup
   lang="ts"
 >
+// TODO: написать комменты
+
+const windowResizeListener = () => actualizeViewportSize()
+
+onMounted(
+  () => {
+    if (!windowResizeListener) {
+      return
+    }
+
+    window
+      .addEventListener(
+        'resize',
+        windowResizeListener
+      )
+  }
+)
+
+onBeforeUnmount(
+  () => {
+    window
+      .removeEventListener(
+        'resize',
+        windowResizeListener
+      )
+  }
+)
+
+const vhInfo: {min?: number; max?: number; current?: number} = {
+  min: undefined,
+  current: undefined,
+  max: undefined,
+}
+
+function actualizeViewportSize () {
+  const visualViewport = window.visualViewport || window
+
+  const height = 'height' in visualViewport
+    ? visualViewport.height
+    : undefined
+
+  if (!height) {
+    return
+  }
+
+  const newVh = +(height * .01).toFixed(2)
+
+  if (
+    vhInfo.min === undefined
+    || vhInfo.min > newVh
+  ) {
+    vhInfo.min = newVh
+  }
+
+  vhInfo.current = newVh
+
+  if (
+    vhInfo.max === undefined
+    || vhInfo.max < newVh
+  ) {
+    vhInfo.max = newVh
+  }
+
+  document.body.style
+    .setProperty('--vh--min', `${vhInfo.min}px`)
+
+  document.body.style
+    .setProperty('--vh', `${vhInfo.current}px`)
+
+  document.body.style
+    .setProperty('--vh--max', `${vhInfo.max}px`)
+}
 </script>
 
 <style lang="sass">

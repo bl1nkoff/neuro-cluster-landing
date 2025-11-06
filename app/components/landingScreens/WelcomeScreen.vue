@@ -38,17 +38,16 @@
   display: flex
   position: relative
   overflow: hidden
-  min-height: calc(100vh - var(--header-height, 0px))
+  align-items: center
+  justify-content: center
 
   // pc
   @media(min-width: 1000px)
-    align-items: center
-    justify-content: center
+    min-height: calc(var(--vh, 1vh) * 100 - var(--header-height, 0px))
 
   // mobile
   @media(max-width: 1000px)
-    align-items: start
-    justify-content: start
+    min-height: calc(var(--vh--min, 1vh) * 100 - var(--header-height, 0px))
 
   &__content
     width: 100%
@@ -69,7 +68,6 @@
 
     // mobile
     @media(max-width: 1000px)
-      margin-top: 46px
       margin-bottom: 20px
       font-size: 32px
 
@@ -110,18 +108,19 @@
     position: absolute
     height: 100%
     z-index: 0
-    padding: 50px 0
     top: 0
     object-fit: cover
 
     // pc
     @media(min-width: 1000px)
       right: 0
+      padding: 50px 0
 
     // mobile
     @media(max-width: 1000px)
       opacity: .6
-      right: -100px
+      right: -150px
       height: 75%
+      padding: 25px 0
       top: 10%
 </style>
