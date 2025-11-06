@@ -1,14 +1,30 @@
 <template>
   <landing-screen
     content-class="ls-roadmap-screen"
-    header="Дорожная карта по внедрению ИИ"
     id="roadmap-screen"
+    centered-header
   >
+    <template #header>
+      Дорожная карта по&nbsp;внедрению&nbsp;ИИ
+    </template>
+
+    <img
+      class="ls-roadmap-screen__mobile-image"
+      src="/roadmap-image-1.svg"
+      alt="roadmap-image"
+    />
+
     <div
       class="ls-roadmap-screen__step-row"
       ref="firstCardRef"
     >
       <div class="ls-roadmap-screen__step nc-card nc-card--horizontal-rev">
+        <img
+          class="ls-roadmap-screen__step-number"
+          src="/roadmap-1.svg"
+          alt="1"
+        />
+
         <div class="nc-card__header ls-roadmap-screen__step-name">
           Аудит и проектирование
         </div>
@@ -141,6 +157,12 @@
         </div>
       </div>
     </div>
+
+    <img
+      class="ls-roadmap-screen__mobile-image"
+      src="/roadmap-image-2.svg"
+      alt="roadmap-image"
+    />
   </landing-screen>
 </template>
 
@@ -290,4 +312,16 @@ onBeforeUnmount(() => {
 
       &--bottom
         left: -50px
+
+    // mobile
+    @media(max-width: 1000px)
+      display: none
+
+  &__mobile-image
+    width: 100%
+    margin-bottom: 16px
+
+    // pc
+    @media(min-width: 1000px)
+      display: none
 </style>

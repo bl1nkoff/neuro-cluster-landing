@@ -25,28 +25,52 @@
     </div>
 
     <div class="ls-overview-screen__cards">
-      <div class="nc-card nc-card--centered ls-overview-screen__card">
-        <div class="nc-card__header">Собственная ИИ-платформа</div>
+      <div class="ls-overview-screen__card-wrapper">
+        <div class="nc-card nc-card--centered ls-overview-screen__card">
+          <div class="nc-card__header">Собственная ИИ-платформа</div>
 
-        <div class="nc-card__content">
-          Мы не используем чужие конструкторы.<br>Это значит, что ваш нейро-сотрудник будет работать стабильно, данные останутся в безопасности, а мы можем настроить его под любую уникальную задачу
+          <div class="nc-card__content">
+            Мы не используем чужие конструкторы.<br>Это значит, что ваш нейро-сотрудник будет работать стабильно, данные останутся в безопасности, а мы можем настроить его под любую уникальную задачу
+          </div>
         </div>
+
+        <img
+          class="ls-overview-screen__card-bg-image"
+          src="/overview-image.svg"
+          alt="overview-image"
+        />
       </div>
 
-      <div class="nc-card nc-card--centered ls-overview-screen__card">
-        <div class="nc-card__header">Инженеры и консалтеры</div>
+      <div class="ls-overview-screen__card-wrapper">
+        <div class="nc-card nc-card--centered ls-overview-screen__card">
+          <div class="nc-card__header">Инженеры и консалтеры</div>
 
-        <div class="nc-card__content">
-          Сначала наши консалтеры находят, где есть точка роста, которая позволит увеличить доходы или сократить расходы. Затем инженеры создают ИИ под эту задачу. Технология ради результата, а не ради технологии
+          <div class="nc-card__content">
+            Сначала наши консалтеры находят, где есть точка роста, которая позволит увеличить доходы или сократить расходы. Затем инженеры создают ИИ под эту задачу. Технология ради результата, а не ради технологии
+          </div>
         </div>
+
+        <img
+          class="ls-overview-screen__card-bg-image"
+          src="/overview-image.svg"
+          alt="overview-image"
+        />
       </div>
 
-      <div class="nc-card nc-card--centered ls-overview-screen__card">
-        <div class="nc-card__header">Решение «под ключ»</div>
+      <div class="ls-overview-screen__card-wrapper">
+        <div class="nc-card nc-card--centered ls-overview-screen__card">
+          <div class="nc-card__header">Решение «под ключ»</div>
 
-        <div class="nc-card__content">
-          Мы не бросим вас один-на-один с непонятным конструктором. Мы сами проектируем, обучаем и внедряем нейро-сотрудника. Вы получаете готовый инструмент, который начинает приносить пользу с первого дня
+          <div class="nc-card__content">
+            Мы не бросим вас один-на-один с непонятным конструктором. Мы сами проектируем, обучаем и внедряем нейро-сотрудника. Вы получаете готовый инструмент, который начинает приносить пользу с первого дня
+          </div>
         </div>
+
+        <img
+          class="ls-overview-screen__card-bg-image"
+          src="/overview-image.svg"
+          alt="overview-image"
+        />
       </div>
     </div>
   </landing-screen>
@@ -63,7 +87,14 @@
   justify-content: space-evenly
   height: 100%
   flex-grow: 1
-  gap: 64px
+
+  // pc
+  @media(min-width: 1000px)
+    gap: 64px
+
+  // mobile
+  @media(max-width: 1000px)
+    gap: 32px
 
   &__description-wrapper
     display: flex
@@ -76,17 +107,18 @@
       flex-direction: column
 
   &__description
-    text-align: center
     color: var(--text-color-secondary)
-    margin: 50px auto 0
+    z-index: 1
 
     // pc
     @media(min-width: 1000px)
+      margin: 50px auto 0
       font-size: 24px
+      text-align: center
 
     // mobile
     @media(max-width: 1000px)
-      font-size: 20px
+      //font-size: 20px
 
   &__image
     // pc
@@ -101,12 +133,12 @@
     // mobile
     @media(max-width: 1000px)
       display: none
-      //width: 100%
 
   &__cards
     display: grid
     gap: 32px
     justify-items: stretch
+    z-index: 1
 
     // pc
     @media(min-width: 1000px)
@@ -117,7 +149,25 @@
     @media(max-width: 1000px)
       gap: 16px
 
+  &__card-wrapper
+    position: relative
+    border-radius: 20px
+    overflow: hidden
+
   &__card
     flex-grow: 1
     padding: 32px 16px
+    z-index: 1
+    position: relative
+
+  &__card-bg-image
+    position: absolute
+    right: -25px
+    top: -25px
+    z-index: 0
+    height: 100px
+
+    // pc
+    @media(min-width: 1000px)
+      display: none
 </style>

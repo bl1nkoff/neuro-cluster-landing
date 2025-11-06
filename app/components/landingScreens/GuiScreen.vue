@@ -1,13 +1,13 @@
 <template>
   <landing-screen
     content-class="ls-gui-screen"
-    header="Единый центр управления ИИ"
+    header="Центр управления - интерфейс"
     id="gui-screen"
   >
     <div class="ls-gui-screen__cards">
       <div class="nc-card ls-gui-screen__card">
         <div class="nc-card__header">
-          Полный контроль над «мозгом» ИИ
+          Полный контроль над&nbsp;«мозгом»&nbsp;ИИ
         </div>
 
         <div class="nc-card__content ls-gui-screen__card-content">
@@ -17,13 +17,13 @@
             <li>Мгновенное обновление базы знаний</li>
           </ul>
 
-          <p>На страницах: «База знаний», «Роли и сценарии»</p>
+          <small class="ls-gui-screen__card-hint">На страницах: «База знаний», «Роли&nbsp;и&nbsp;сценарии»</small>
         </div>
       </div>
 
       <div class="nc-card ls-gui-screen__card">
         <div class="nc-card__header">
-          Детальная и прозрачная аналитика
+          Детальная и прозрачная&nbsp;аналитика
         </div>
 
         <div class="nc-card__content ls-gui-screen__card-content">
@@ -33,12 +33,12 @@
             <li>Анализируйте ROI и влияние на бизнес</li>
           </ul>
 
-          <p>На страницах: «Дашборд», «Аналитика», «Расходы ИИ»</p>
+          <small class="ls-gui-screen__card-hint">На страницах: «Дашборд», «Аналитика», «Расходы&nbsp;ИИ»</small>
         </div>
       </div>
 
       <div class="nc-card ls-gui-screen__card">
-        <div class="nc-card__header">Гибкие интеграции с ИТ-системими</div>
+        <div class="nc-card__header">Гибкие интеграции с ИТ-системами</div>
 
         <div class="nc-card__content ls-gui-screen__card-content">
           <ul>
@@ -47,12 +47,12 @@
             <li>Централизованно управляйте доступами</li>
           </ul>
 
-          <p>На странице: «Интеграции»</p>
+          <small class="ls-gui-screen__card-hint">На странице: «Интеграции»</small>
         </div>
       </div>
     </div>
 
-    <div class="ls-gui-screen__screenshots">
+    <div class="ls-gui-screen__screenshots-wrapper">
 <!--      <img-->
 <!--        v-for="(screenshotUrl, screenshotIndex) in SCREENSHOT_URL"-->
 <!--        :key="screenshotIndex"-->
@@ -60,11 +60,24 @@
 <!--        :alt="`Скриншот № ${screenshotIndex}`"-->
 <!--        class="ls-gui-screen__screenshot"-->
 <!--      />-->
+
       <img
         src="/gui-screenshots.png"
         alt="Скриншоты панели управления"
         class="ls-gui-screen__screenshots"
       />
+
+<!--      <img-->
+<!--        src="/overview-image.svg"-->
+<!--        alt="gui-screen-decoration"-->
+<!--        class="ls-gui-screen__decoration ls-gui-screen__decoration&#45;&#45;top"-->
+<!--      />-->
+
+<!--      <img-->
+<!--        src="/overview-image.svg"-->
+<!--        alt="gui-screen-decoration"-->
+<!--        class="ls-gui-screen__decoration ls-gui-screen__decoration&#45;&#45;bottom"-->
+<!--      />-->
     </div>
   </landing-screen>
 </template>
@@ -105,6 +118,13 @@ const SCREENSHOT_URL: string[] = [
     flex-direction: column
     gap: 16px
 
+  &__card-hint
+    font-size: 14px
+
+  &__screenshots-wrapper
+    width: 100%
+    position: relative
+
   &__screenshot
     width: 75%
     border-radius: 20px
@@ -121,4 +141,20 @@ const SCREENSHOT_URL: string[] = [
 
   &__screenshots
     width: 100%
+    position: relative
+
+  &__decoration
+    height: 200px
+    position: absolute
+    left: 50px
+
+    &--top
+      top: 50px
+
+    &--bottom
+      bottom: 50px
+
+    // mobile
+    @media(max-width: 1000px)
+      display: none
 </style>

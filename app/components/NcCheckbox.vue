@@ -66,11 +66,10 @@ defineEmits<{
 >
 .nc-checkbox
   display: flex
-  align-items: flex-start
+  align-items: center
   gap: 12px
   cursor: pointer
   user-select: none
-  line-height: 22px
   transition-property: background-color, border-color
   transition-duration: 200ms
   transition-timing-function: ease
@@ -96,13 +95,21 @@ defineEmits<{
     display: flex
     align-items: center
     justify-content: center
-    width: 20px
-    height: 20px
     border: 2px solid #444
     border-radius: 4px
     background: #1e1e1e
     transition: all 0.2s ease
     flex-shrink: 0
+
+    // pc
+    @media(max-width: 1000px)
+      width: 20px
+      height: 20px
+
+    // mobile
+    @media(max-width: 1000px)
+      width: 24px
+      height: 24px
 
 
   // Состояния
@@ -137,8 +144,8 @@ defineEmits<{
 
   // Иконка галочки
   &__check-icon
-    width: 12px
-    height: 12px
+    width: 14px
+    height: 14px
     color: white
     opacity: 0
     transition: opacity 0.2s ease
@@ -147,6 +154,6 @@ defineEmits<{
   // Текст метки
   &__label
     overflow-wrap: break-word
-
+    margin-top: 1px
 
 </style>

@@ -40,7 +40,13 @@ body
   --primary-50: #04264D7F
   --primary-75: #04264DBF
 
-  --primary-button-backgound: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
+  // pc
+  @media (min-width: 1000px)
+    --primary-button-backgound: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
+
+  // mobile
+  @media (max-width: 1000px)
+    --primary-button-backgound: linear-gradient(to left, #062259 0%, #053AA2 100%)
 
   background: var(--background-color)
   color: var(--text-color)
@@ -74,7 +80,9 @@ ul, ol
     color: var(--text-color)
 
   &--centered
-    text-align: center
+    // pc
+    @media(min-width: 1000px)
+      text-align: center
 
   &__header
     margin-bottom: 16px
@@ -126,4 +134,7 @@ ul, ol
 
   &--page-separator
     width: var(--layout-content-width)
+
+.nc-space
+  flex-grow: 1
 </style>

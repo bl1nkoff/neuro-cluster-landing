@@ -38,12 +38,12 @@
   display: flex
   position: relative
   overflow: hidden
+  min-height: calc(100vh - var(--header-height, 0px))
 
   // pc
   @media(min-width: 1000px)
     align-items: center
     justify-content: center
-    min-height: calc(100vh - var(--header-height, 0px))
 
   // mobile
   @media(max-width: 1000px)
@@ -69,6 +69,7 @@
 
     // mobile
     @media(max-width: 1000px)
+      margin-top: 46px
       margin-bottom: 20px
       font-size: 32px
 
@@ -83,13 +84,12 @@
 
     // mobile
     @media(max-width: 1000px)
-      font-size: 20px
+      font-size: 16px
 
   &__go-to-form
     border-radius: 8px
     font-size: 24px
     font-weight: bold
-    padding: 20px
     color: var(--text-color)
     text-align: center
     background: var(--primary-button-backgound)
@@ -102,7 +102,8 @@
     // mobile
     @media(max-width: 1000px)
       //font-size: 36px
-      margin-top: 40px
+      margin-top: 64px
+      padding: 16px
 
   &__image
     position: absolute
@@ -118,7 +119,8 @@
 
     // mobile
     @media(max-width: 1000px)
-      right: -40%
+      opacity: .6
+      right: -100px
       height: 75%
       top: 10%
 </style>

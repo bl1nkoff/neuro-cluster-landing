@@ -19,9 +19,17 @@
             {{ +productIndex + 1 }}
           </div>
 
-          <div class="ls-catalog-screen__product-name">
-            {{ product.name }}
+          <div class="ls-catalog-screen__product-text">
+            <div class="ls-catalog-screen__product-name">{{ product.name }}</div>
+            <div class="ls-catalog-screen__product-department-name">{{ product.departmentName }}</div>
           </div>
+
+          <div class="nc-space"/>
+
+          <img
+            class="ls-catalog-screen__product-expand-icon"
+            :src="selectedProductCode === product.code ? '/icons/collapse.svg' : '/icons/expand.svg'"
+          />
         </button>
 
         <product-descriptions-collector
@@ -52,24 +60,33 @@ const PRODUCT_QUERY_CODE = 'product'
 
 interface Product {
   name: string,
+  departmentName: string,
   code: PRODUCT_CODES
 }
 
 const PRODUCTS: Product[] = [
   {
-    name: 'Нейро-консультант & Продажи',
+    // name: 'Нейро-консультант\n& Продажи',
+    name: 'Нейро-консультант',
+    departmentName: 'Продажи',
     code: PRODUCT_CODES.SALES,
   },
   {
-    name: 'Нейро-оператор & Поддержка',
+    // name: 'Нейро-оператор\n& Поддержка',
+    name: 'Нейро-оператор',
+    departmentName: 'Поддержка',
     code: PRODUCT_CODES.SUPPORT,
   },
   {
-    name: 'Нейро-наставник & Обучение',
+    // name: 'Нейро-наставник\n& Обучение',
+    name: 'Нейро-наставник',
+    departmentName: 'Обучение',
     code: PRODUCT_CODES.TEACHER,
   },
   {
-    name: 'Нейро-рекрутер & HR',
+    // name: 'Нейро-рекрутер\n& HR',
+    name: 'Нейро-рекрутер',
+    departmentName: 'HR',
     code: PRODUCT_CODES.HR,
   },
   {
@@ -97,7 +114,14 @@ const selectedProductCode: Ref<PRODUCT_CODES | undefined> = ref(
 
 const router = useRouter()
 
-function selectProductCode(productCode: PRODUCT_CODES) {
+function selectProductCode(productCode: PRODUCT_CODES | undefined) {
+  if (
+    productCode === selectedProductCode.value
+    && app.$isMobile()
+  ) {
+    productCode = undefined
+  }
+
   selectedProductCode.value = productCode
 
   const newHash = '#catalog-screen'
@@ -110,7 +134,12 @@ function selectProductCode(productCode: PRODUCT_CODES) {
 
   const newQueryParams = new URLSearchParams(currentQueryParams)
 
-  newQueryParams.set(PRODUCT_QUERY_CODE, productCode)
+  if (productCode) {
+    newQueryParams.set(PRODUCT_QUERY_CODE, productCode)
+  }
+  else {
+    newQueryParams.delete(PRODUCT_QUERY_CODE)
+  }
 
   // Изменяем хеш БЕЗ прокрутки
   if (
@@ -151,9 +180,16 @@ function selectProductCode(productCode: PRODUCT_CODES) {
   &__product-list
     display: flex
     flex-direction: column
-    gap: 24px
     flex-shrink: 0
     position: relative
+
+    // pc
+    @media(min-width: 1000px)
+      gap: 24px
+
+    // mobile
+    @media(max-width: 1000px)
+      gap: 16px
 
   &__product
     font: inherit
@@ -169,7 +205,6 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     transition-timing-function: ease
     display: flex
     flex-wrap: nowrap
-    gap: 20px
     align-items: center
     background: linear-gradient(to left, #1111117F, #2525257F)
 
@@ -177,11 +212,13 @@ function selectProductCode(productCode: PRODUCT_CODES) {
     @media(min-width: 1000px)
       font-size: 24px
       padding: 8px 16px
+      gap: 20px
 
     // mobile
     @media(max-width: 1000px)
       font-size: 20px
       padding: 8px
+      gap: 16px
 
     &--selected
       color: var(--text-color)
@@ -221,6 +258,19 @@ function selectProductCode(productCode: PRODUCT_CODES) {
 
   &__product--selected &__product-icon
     border-color: var(--text-color)
+
+  //&__product-name
+  //  white-space: pre-wrap
+
+  &__product-department-name
+    font-size: 16px
+    white-space: pre-wrap
+
+  &__product-expand-icon
+    height: 20px
+
+    @media(min-width: 1000px)
+      display: none
 
   &__product-description-wrapper
     display: flex

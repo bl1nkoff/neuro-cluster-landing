@@ -120,27 +120,35 @@ definePageMeta(
 
   &__header
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
-    gap: 20px
     align-items: center
     margin-bottom: 20px
+
+    // mobile
+    @media (max-width: 1000px)
+      gap: 8px
+
+    // pc
+    @media (max-width: 1000px)
+      gap: 20px
 
   &__legal-name
     font-size: 24px
     font-weight: bold
+
+  &__download-btn
+    padding: 15px 20px
+    border-radius: 20px
+    display: block
+    background: var(--primary-button-backgound)
+    color: var(--text-color)
+    text-decoration: none
 
   &__legal-content
     line-height: 1.5em
 
     & > p
       margin: .75em 0
-
-  &__download-btn
-    padding: 15px 20px
-    border-radius: 20px
-    display: inline-block
-    background: linear-gradient(to right, #062259 0%, #053AA2 100%)
-    color: var(--text-color)
-    text-decoration: none
 
 </style>

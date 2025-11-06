@@ -1,5 +1,7 @@
 <template>
   <footer class="nc-footer__wrapper" id="footer">
+    <div class="nc-separator nc-separator--page-separator"/>
+
     <div class="nc-footer">
       <div class="nc-footer__logo">
         НейроКластер
@@ -7,7 +9,7 @@
 
       <div class="nc-footer__legal-content">
         <div class="nc-footer__link nc-footer__link--pseudo">
-          © 2025 «НейроКластер». Все права защищены
+          © 2025 «НейроКластер». Все&nbsp;права&nbsp;защищены
         </div>
 
         <a
@@ -105,7 +107,6 @@
     grid-template-areas: 'logo' 'business-content' 'legal-content'
 
   &__wrapper
-    border-top: 3px var(--primary) solid
     background: var(--background-color)
 
   &__logo

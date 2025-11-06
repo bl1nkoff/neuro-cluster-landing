@@ -5,7 +5,7 @@
   >
     <div class="nc-card nc-card--horizontal ls-contact-form-screen__card">
       <div class="nc-card__header ls-contact-form-screen__card-header">
-        Хотите увидеть, как ИИ усилит ваш бизнес?
+        Хотите увидеть, как ИИ&nbsp;усилит ваш бизнес?
       </div>
 
       <div class="nc-card__content ls-contact-form-screen__card-content">
@@ -15,7 +15,7 @@
       </div>
 
       <div class="nc-card__header">
-        На 30-минутной онлайн встрече вы увидите:
+        На 30-минутной онлайн&nbsp;встрече вы&nbsp;увидите:
       </div>
 
       <div class="nc-card__content ls-contact-form-screen__card-content">
@@ -113,12 +113,11 @@
           v-model="form.personalDataProcessingApproval"
           :error="invalidFormFields.includes('personalDataProcessingApproval')"
           class="ls-contact-form-screen__pd-checkbox"
-          label="Согласие на обработку персональных данных"
-        />
-
-        <div class="ls-contact-form-screen__legal-footer">
-          <span>Отправляя форму, вы принимаете правила</span> <a href="/legal/privacy-policy" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Политики конфиденциальности</a> <span>и</span> <a href="/legal/user-agreement" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Пользовательского соглашения</a>
-        </div>
+        >
+          <template #label>
+            Согласие на обработку персональных&nbsp;данных
+          </template>
+        </nc-checkbox>
       </div>
 
       <div
@@ -134,6 +133,10 @@
       >
         Узнать, как это работает
       </button>
+
+      <div class="ls-contact-form-screen__legal-footer">
+        <span>Отправляя форму, вы принимаете правила</span> <a href="/legal/privacy-policy" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Политики конфиденциальности</a> <span>и</span> <a href="/legal/user-agreement" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Пользовательского соглашения</a>
+      </div>
     </form>
   </landing-screen>
 </template>
@@ -283,15 +286,16 @@ function resetForm(): void {
     grid-area: form
     display: flex
     flex-direction: column
-    gap: 24px
 
     // pc
     @media(min-width: 1000px)
       padding: 32px 20px
+      gap: 24px
 
     // mobile
     @media(max-width: 1000px)
       padding: 20px 10px
+      gap: 16px
 
   &__form-inputs
     display: flex
@@ -305,13 +309,14 @@ function resetForm(): void {
 
   &__legal-footer
     padding: 0 16px
-    margin-left: 36px
+    //margin-left: 36px
     font-size: 14px
+    text-align: center
 
   &__legal-footer-link
     display: inline-block
     color: #4978D5
-    padding: 4px
+    //padding: 4px
     border-radius: 8px
 
   &__form-submit
