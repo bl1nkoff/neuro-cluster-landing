@@ -97,6 +97,7 @@
     // pc
     @media(min-width: 1000px)
       width: 400px
+      padding: 20px
       margin-top: 64px
 
     // mobile

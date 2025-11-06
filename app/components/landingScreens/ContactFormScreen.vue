@@ -127,15 +127,17 @@
         Подсветили ошибки в форме
       </div>
 
-      <button
-        type="submit"
-        class="ls-contact-form-screen__form-submit nc-clickable"
-      >
-        Узнать, как это работает
-      </button>
+      <div class="ls-contact-form-screen__form-submit-wrapper">
+        <button
+          type="submit"
+          class="ls-contact-form-screen__form-submit nc-clickable"
+        >
+          Узнать, как это работает
+        </button>
 
-      <div class="ls-contact-form-screen__legal-footer">
-        <span>Отправляя форму, вы принимаете правила</span> <a href="/legal/privacy-policy" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Политики конфиденциальности</a> <span>и</span> <a href="/legal/user-agreement" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Пользовательского соглашения</a>
+        <div class="ls-contact-form-screen__legal-footer">
+          <span>Отправляя форму, вы принимаете правила</span> <a href="/legal/privacy-policy" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Политики конфиденциальности</a> <span>и</span> <a href="/legal/user-agreement" class="ls-contact-form-screen__legal-footer-link nc-clickable" target="_blank">Пользовательского соглашения</a>
+        </div>
       </div>
     </form>
   </landing-screen>
@@ -290,7 +292,7 @@ function resetForm(): void {
     // pc
     @media(min-width: 1000px)
       padding: 32px 20px
-      gap: 24px
+      gap: 16px
 
     // mobile
     @media(max-width: 1000px)
@@ -311,13 +313,32 @@ function resetForm(): void {
     padding: 0 16px
     //margin-left: 36px
     font-size: 14px
-    text-align: center
+
+    // pc
+    @media(min-width: 1000px)
+
+    // mobile
+    @media(max-width: 1000px)
+      text-align: center
 
   &__legal-footer-link
     display: inline-block
     color: #4978D5
     //padding: 4px
     border-radius: 8px
+
+  &__form-submit-wrapper
+    display: flex
+
+    // pc
+    @media(min-width: 1000px)
+      flex-direction: column-reverse
+      gap: 32px
+
+    // mobile
+    @media(max-width: 1000px)
+      flex-direction: column
+      gap: 16px
 
   &__form-submit
     border-radius: 20px
@@ -330,7 +351,7 @@ function resetForm(): void {
     // pc
     @media(min-width: 1000px)
       font-size: 20px
-      padding: 24px
+      padding: 16px
 
     // mobile
     @media(max-width: 1000px)

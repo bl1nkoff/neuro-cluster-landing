@@ -42,7 +42,8 @@ body
 
   // pc
   @media (min-width: 1000px)
-    --primary-button-backgound: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
+    //--primary-button-backgound: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
+    --primary-button-backgound: linear-gradient(to left, #062259 0%, #053AA2 100%)
 
   // mobile
   @media (max-width: 1000px)

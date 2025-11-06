@@ -132,7 +132,7 @@
         class="product-descriptions-collector__button nc-clickable"
         href="/#contact-form-screen"
       >
-        Обсудить мою задачу с экспертом
+        Обсудить мою задачу с&nbsp;экспертом
       </a>
     </div>
   </div>
@@ -184,6 +184,6 @@ defineProps<
 
     // mobile
     @media(max-width: 1000px)
-      padding: 20px
-      font-size: 20px
+      padding: 16px
+      font-size: 16px
 </style>
