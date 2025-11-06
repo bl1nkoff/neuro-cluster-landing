@@ -5,12 +5,6 @@
     header="Готовые нейро-сотрудники"
     id="catalog-screen"
   >
-    <img
-      class="ls-catalog-screen__image"
-      src="/catalog-image.png"
-      alt="catalog-image"
-    />
-
     <div class="ls-catalog-screen__product-list">
       <template
         v-for="(product, productIndex) in PRODUCTS"
@@ -33,16 +27,16 @@
         <product-descriptions-collector
           v-if="selectedProductCode === product.code && $isMobile()"
           :product-code="product.code"
-          class="ls-catalog-screen__product-description-wrapper"
         />
       </template>
     </div>
 
-    <product-descriptions-collector
-      v-if="selectedProductCode && !$isMobile()"
-      :product-code="selectedProductCode"
-      class="ls-catalog-screen__product-description-wrapper"
-    />
+    <div class="ls-catalog-screen__product-description-wrapper">
+      <product-descriptions-collector
+        v-if="selectedProductCode && !$isMobile()"
+        :product-code="selectedProductCode"
+      />
+    </div>
   </landing-screen>
 </template>
 
@@ -228,18 +222,20 @@ function selectProductCode(productCode: PRODUCT_CODES) {
   &__product--selected &__product-icon
     border-color: var(--text-color)
 
-  &__image
-    display: none
-    position: absolute
-    z-index: 0
-    bottom: 0
-    width: 100%
+  &__product-description-wrapper
+    display: flex
 
+  &__product-description-wrapper,
+  &__product-list
     // pc
-    @media(min-width: 1000px)
-      right: -50%
+    @media (min-width: 1000px)
+      padding: 20px
+      border-radius: 20px
+      border: 2px solid var(--primary)
 
-    // mobile
-    @media(max-width: 1000px)
-      left: 0
+      &:not(:first-child)
+        border-left: none
+
+      &:not(:last-child)
+        border-right: none
 </style>

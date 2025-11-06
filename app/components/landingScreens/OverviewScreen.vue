@@ -3,22 +3,29 @@
     header="Что такое «НейроКластер»"
     content-class="ls-overview-screen"
     id="overview-screen"
+    centered-header
   >
     <div class="ls-overview-screen__description-wrapper">
+      <img
+        class="ls-overview-screen__image"
+        src="/overview-image.svg"
+        alt="overview-image"
+      />
+
       <div class="ls-overview-screen__description">
         «НейроКластер» - это платформа, команда инженеров и консалтеров<br>Мы создаем и внедряем нейро-сотрудника в ваши бизнес-процессы
-        за 30 дней. Результат - ИИ выполняет рутинную работу быстрее, дешевле, стабильнее и эффективнее человека
+        за 30 дней.<br>Результат - ИИ выполняет рутинную работу быстрее, дешевле, стабильнее и эффективнее человека
       </div>
 
       <img
         class="ls-overview-screen__image"
-        src="/overview-image-6.svg"
+        src="/overview-image.svg"
         alt="overview-image"
       />
     </div>
 
     <div class="ls-overview-screen__cards">
-      <div class="nc-card ls-overview-screen__card">
+      <div class="nc-card nc-card--centered ls-overview-screen__card">
         <div class="nc-card__header">Собственная ИИ-платформа</div>
 
         <div class="nc-card__content">
@@ -26,7 +33,7 @@
         </div>
       </div>
 
-      <div class="nc-card ls-overview-screen__card">
+      <div class="nc-card nc-card--centered ls-overview-screen__card">
         <div class="nc-card__header">Инженеры и консалтеры</div>
 
         <div class="nc-card__content">
@@ -34,7 +41,7 @@
         </div>
       </div>
 
-      <div class="nc-card ls-overview-screen__card">
+      <div class="nc-card nc-card--centered ls-overview-screen__card">
         <div class="nc-card__header">Решение «под ключ»</div>
 
         <div class="nc-card__content">
@@ -62,13 +69,16 @@
     display: flex
     gap: 32px
     align-items: center
+    position: relative
 
     // mobile
     @media(max-width: 1000px)
       flex-direction: column
 
   &__description
+    text-align: center
     color: var(--text-color-secondary)
+    margin: 50px auto 0
 
     // pc
     @media(min-width: 1000px)
@@ -79,12 +89,14 @@
       font-size: 20px
 
   &__image
-    opacity: .5
-
     // pc
     @media(min-width: 1000px)
-      height: 250px
-      margin-right: 64px
+      height: 200px
+      position: absolute
+      top: -120px
+
+      &:last-child
+        right: 0
 
     // mobile
     @media(max-width: 1000px)

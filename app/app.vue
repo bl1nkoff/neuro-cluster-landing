@@ -36,13 +36,11 @@ body
   --background-color: #000203
   --background-color--50: #0002037F
 
-  //--primary: #04264D
-  --primary: var(--text-color-secondary)
+  --primary: #04264D
   --primary-50: #04264D7F
   --primary-75: #04264DBF
 
-  //--primary-button-backgound: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
-  --primary-button-backgound: linear-gradient(to left, #5959597F 0%, #A3A3A37F 100%)
+  --primary-button-backgound: linear-gradient(to left, #0622597F 0%, #053AA27F 100%)
 
   background: var(--background-color)
   color: var(--text-color)
@@ -64,9 +62,6 @@ ul, ol
   border-radius: 20px
   transition: color .2s ease
 
-  &:hover
-    color: var(--text-color)
-
   // pc
   @media (min-width: 1000px)
     &--horizontal
@@ -74,6 +69,12 @@ ul, ol
 
     &--horizontal-rev
       background: linear-gradient(to left, #2525257F, #1111117F)
+
+  &:hover
+    color: var(--text-color)
+
+  &--centered
+    text-align: center
 
   &__header
     margin-bottom: 16px
@@ -116,4 +117,13 @@ ul, ol
 
   &:hover::after
     opacity: 1
+
+.nc-separator
+  background: linear-gradient(to left, var(--background-color) 0%, var(--primary) 50%, var(--background-color) 100%)
+  width: 100%
+  height: 4px
+  margin: auto
+
+  &--page-separator
+    width: var(--layout-content-width)
 </style>

@@ -2,7 +2,7 @@
   <div class="product-descriptions-collector__product-description-wrapper">
     <div
       v-show="!productCode || productCode === PRODUCT_CODES.SALES"
-      class="nc-card nc-card--horizontal product-descriptions-collector__product-description"
+      class="nc-card nc-card--horizontal-rev product-descriptions-collector__product-description"
     >
       <div class="nc-card__header">
         Функционал
@@ -28,7 +28,7 @@
 
     <div
       v-show="productCode && productCode === PRODUCT_CODES.SUPPORT"
-      class="nc-card product-descriptions-collector__product-description"
+      class="nc-card nc-card--horizontal-rev product-descriptions-collector__product-description"
     >
       <div class="nc-card__header">
         Функционал
@@ -54,7 +54,7 @@
 
     <div
       v-show="productCode && productCode === PRODUCT_CODES.TEACHER"
-      class="nc-card product-descriptions-collector__product-description"
+      class="nc-card nc-card--horizontal-rev product-descriptions-collector__product-description"
     >
       <div class="nc-card__header">
         Функционал
@@ -80,7 +80,7 @@
 
     <div
       v-show="productCode && productCode === PRODUCT_CODES.HR"
-      class="nc-card product-descriptions-collector__product-description"
+      class="nc-card nc-card--horizontal-rev product-descriptions-collector__product-description"
     >
       <div class="nc-card__header">
         Функционал
@@ -109,7 +109,7 @@
       class="product-descriptions-collector__product-description-wrapper--pseudo"
     >
       <div
-        class="nc-card product-descriptions-collector__product-description"
+        class="nc-card nc-card--horizontal-rev product-descriptions-collector__product-description"
       >
         <div class="nc-card__header">
           Не нашли ИИ под свою задачу?

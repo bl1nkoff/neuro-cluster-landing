@@ -9,12 +9,6 @@
       ref="firstCardRef"
     >
       <div class="ls-roadmap-screen__step nc-card nc-card--horizontal-rev">
-        <img
-          class="ls-roadmap-screen__step-number"
-          src="/roadmap-1.svg"
-          alt="1"
-        />
-
         <div class="nc-card__header ls-roadmap-screen__step-name">
           Аудит и проектирование
         </div>
@@ -41,6 +35,12 @@
           stroke-linejoin="round"
         />
       </svg>
+
+      <img
+        class="ls-roadmap-screen__image ls-roadmap-screen__image--top"
+        src="/roadmap-image-1.svg"
+        alt="roadmap-image"
+      />
     </div>
 
     <div class="ls-roadmap-screen__step-row">
@@ -114,6 +114,12 @@
     </div>
 
     <div class="ls-roadmap-screen__step-row ls-roadmap-screen__step-row--no-line">
+      <img
+        class="ls-roadmap-screen__image ls-roadmap-screen__image--bottom"
+        src="/roadmap-image-2.svg"
+        alt="roadmap-image"
+      />
+
       <div class="ls-roadmap-screen__step nc-card nc-card--horizontal">
         <img
           class="ls-roadmap-screen__step-number"
@@ -196,6 +202,8 @@ onBeforeUnmount(() => {
   &__step-row
     display: flex
     width: 100%
+    position: relative
+    overflow: hidden
 
     // mobile
     @media(max-width: 1000px)
@@ -270,4 +278,16 @@ onBeforeUnmount(() => {
 
     &:first-child
       transform: scaleX(-1)
+
+  &__image
+    //pc
+    @media(min-width: 1000px)
+      position: absolute
+      height: 175px
+
+      &--top
+        right: -50px
+
+      &--bottom
+        left: -50px
 </style>

@@ -7,23 +7,7 @@
     <div class="ls-gui-screen__cards">
       <div class="nc-card ls-gui-screen__card">
         <div class="nc-card__header">
-          Детальная аналитика
-        </div>
-
-        <div class="nc-card__content ls-gui-screen__card-content">
-          <ul>
-            <li>Проверка KPI и качества работы</li>
-            <li>Контроль расходов до копейки</li>
-            <li>Анализ ROI и влияния на бизнес</li>
-          </ul>
-
-          <p>Абсолютная прозрачность результатов</p>
-        </div>
-      </div>
-
-      <div class="nc-card ls-gui-screen__card">
-        <div class="nc-card__header">
-          Поведение и База знаний
+          Полный контроль над «мозгом» ИИ
         </div>
 
         <div class="nc-card__content ls-gui-screen__card-content">
@@ -33,21 +17,37 @@
             <li>Мгновенное обновление базы знаний</li>
           </ul>
 
-          <p>Полный контроль над «мозгом» ИИ</p>
+          <p>На страницах: «База знаний», «Роли и сценарии»</p>
         </div>
       </div>
 
       <div class="nc-card ls-gui-screen__card">
-        <div class="nc-card__header">Решение «под ключ»</div>
+        <div class="nc-card__header">
+          Детальная и прозрачная аналитика
+        </div>
 
         <div class="nc-card__content ls-gui-screen__card-content">
           <ul>
-            <li>Подключение готовых решений из каталога</li>
-            <li>Разработка интеграций под заказ</li>
-            <li>Централизованное управление доступами</li>
+            <li>Проверяйте KPI и качество работы</li>
+            <li>Контролируйте расходы до копейки</li>
+            <li>Анализируйте ROI и влияние на бизнес</li>
           </ul>
 
-          <p>Гибкая экосистема под ваши задачи</p>
+          <p>На страницах: «Дашборд», «Аналитика», «Расходы ИИ»</p>
+        </div>
+      </div>
+
+      <div class="nc-card ls-gui-screen__card">
+        <div class="nc-card__header">Гибкие интеграции с ИТ-системими</div>
+
+        <div class="nc-card__content ls-gui-screen__card-content">
+          <ul>
+            <li>Подключайте готовые решения из каталога</li>
+            <li>Заказывайте разработку интеграции под вас</li>
+            <li>Централизованно управляйте доступами</li>
+          </ul>
+
+          <p>На странице: «Интеграции»</p>
         </div>
       </div>
     </div>

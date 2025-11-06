@@ -3,6 +3,7 @@
     <div
       v-if="header"
       class="landing-screen__header"
+      :class="{'landing-screen__header--centered': centeredHeader}"
     >
       {{header}}
     </div>
@@ -24,6 +25,7 @@
 defineProps<
   {
     header?: string,
+    centeredHeader?: boolean,
     contentClass?: string,
   }
 >()
@@ -58,5 +60,8 @@ defineProps<
     @media(max-width: 1000px)
       font-size: 24px
       margin-bottom: 24px
+
+    &--centered
+      text-align: center
 
 </style>

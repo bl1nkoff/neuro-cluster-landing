@@ -23,7 +23,7 @@
 
     <img
       class="ls-welcome-screen__image"
-      src="/welcome-image-7.svg"
+      src="/welcome-image.svg"
       alt="welcome-image"
     />
   </landing-screen>
@@ -108,10 +108,9 @@
     position: absolute
     height: 100%
     z-index: 0
-    padding: 50px
+    padding: 50px 0
     top: 0
     object-fit: cover
-    opacity: .5
 
     // pc
     @media(min-width: 1000px)

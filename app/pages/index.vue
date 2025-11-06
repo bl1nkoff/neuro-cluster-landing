@@ -15,6 +15,8 @@
 
     <advantages-screen/>
 
+    <div class="nc-separator nc-separator--page-separator"/>
+
     <contact-form-screen/>
   </div>
 </template>

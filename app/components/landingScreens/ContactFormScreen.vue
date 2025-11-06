@@ -3,7 +3,7 @@
     content-class="ls-contact-form-screen"
     id="contact-form-screen"
   >
-    <div class="nc-card nc-card--horizontal-rev ls-contact-form-screen__card">
+    <div class="nc-card nc-card--horizontal ls-contact-form-screen__card">
       <div class="nc-card__header ls-contact-form-screen__card-header">
         Хотите увидеть, как ИИ усилит ваш бизнес?
       </div>
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="nc-card nc-card--horizontal-rev ls-contact-form-screen__contacts-card">
+    <div class="nc-card nc-card--horizontal ls-contact-form-screen__contacts-card">
       <div class="nc-card__header">
         Наши контакты
       </div>
@@ -67,7 +67,7 @@
     </div>
 
     <form
-      class="nc-card nc-card--horizontal ls-contact-form-screen__form"
+      class="nc-card nc-card--horizontal-rev ls-contact-form-screen__form"
       @submit="submitForm($event)"
     >
       <div class="ls-contact-form-screen__form-inputs">
