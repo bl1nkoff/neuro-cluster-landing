@@ -43,10 +43,12 @@
 
   // pc
   @media(min-width: 1000px)
+    padding-top: 0
     min-height: calc(var(--vh, 1vh) * 100 - var(--header-height, 0px))
 
   // mobile
   @media(max-width: 1000px)
+    padding-top: 0
     min-height: calc(var(--vh--min, 1vh) * 100 - var(--header-height, 0px))
 
   &__content
