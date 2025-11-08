@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       title: 'НейроКластер',
       meta: [
         {property: 'og:title', content: 'НейроКластер'},
-        {property: 'og:description', content: 'Отвечаем твоим клиентам мгновенно 24/7'},
+        {property: 'og:description', content: 'Создаем, внедряем и управляем нейро-сотрудниками'},
         {property: 'og:locale', content: 'ru_RU'},
         {property: 'og:type', content: 'website'},
         {property: 'og:url', content: 'https://neuro-cluster.com'},
