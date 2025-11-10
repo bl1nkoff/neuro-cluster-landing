@@ -80,6 +80,7 @@
         <a
           class="ls-contact-form-screen__contact-link"
           href="https://tenchat.ru/neuro-cluster"
+          target="_blank"
         >
           <img
             src="/icons/tenchat.svg"

@@ -110,6 +110,7 @@
           <a
             class="nc-footer__link nc-footer__link--primary"
             href="https://tenchat.ru/neuro-cluster"
+            target="_blank"
           >
             <img
               src="/icons/tenchat.svg"
