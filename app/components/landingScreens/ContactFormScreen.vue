@@ -41,7 +41,11 @@
           class="ls-contact-form-screen__contact-link"
           href="mailto:dom@neuro-cluster.com"
         >
-          <img src="/icons/mail.svg" alt="mail-icon"/>
+          <img
+            src="/icons/mail.svg"
+            class="ls-contact-form-screen__contact-icon"
+            alt="mail-icon"
+          />
 
           <span>dom@neuro-cluster.com</span>
         </a>
@@ -49,8 +53,13 @@
         <a
           class="ls-contact-form-screen__contact-link"
           href="https://t.me/dom_neuro_cluster"
+          target="_blank"
         >
-          <img src="/icons/telegram.svg" alt="telegram-icon"/>
+          <img
+            src="/icons/telegram.svg"
+            class="ls-contact-form-screen__contact-icon"
+            alt="telegram-icon"
+          />
 
           <span>@dom_neuro_cluster</span>
         </a>
@@ -59,9 +68,26 @@
           class="ls-contact-form-screen__contact-link"
           href="tel:+79956982820"
         >
-          <img src="/icons/phone.svg" alt="phone-icon"/>
+          <img
+            src="/icons/phone.svg"
+            class="ls-contact-form-screen__contact-icon"
+            alt="phone-icon"
+          />
 
           <span>+7 (995) 698-28-20</span>
+        </a>
+
+        <a
+          class="ls-contact-form-screen__contact-link"
+          href="https://tenchat.ru/neuro-cluster"
+        >
+          <img
+            src="/icons/tenchat.svg"
+            class="ls-contact-form-screen__contact-icon"
+            alt="tenchat-icon"
+          />
+
+          <span>Блог в TenChat</span>
         </a>
       </div>
     </div>
@@ -271,18 +297,30 @@ function resetForm(): void {
     grid-area: contacts-card
 
   &__contacts
-    display: flex
-    flex-direction: column
+    // pc
+    @media(min-width: 1000px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+
+    // mobile
+    @media(max-width: 1000px)
+      display: flex
+      flex-direction: column
 
   &__contact-link
+    display: inline-flex
     color: var(--text-color-secondary)
     transition: color .2s ease
     padding: 8px 4px
-    display: inline-flex
     gap: 8px
+    align-items: center
 
     &:hover
       color: var(--text-color)
+
+  &__contact-icon
+    height: 20px
+    width: 20px
 
   &__form
     grid-area: form

@@ -35,11 +35,7 @@ export default defineNuxtPlugin(
       )
     }
     else {
-      console.log('=====================')
       console.log('Я.Метрика не подключена')
-      console.log(`client: ${import.meta.client}`)
-      console.log(`nuxtApp.$config.public.nodeEnv: ${nuxtApp.$config.public.nodeEnv}`)
-      console.log('=====================')
     }
   }
 )

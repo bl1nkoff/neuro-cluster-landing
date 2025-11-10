@@ -33,16 +33,32 @@
             О компании
           </div>
 
-          <a class="nc-footer__link nc-footer__link--primary" href="/#catalog-screen">
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="/#catalog-screen"
+          >
             Нейро-сотрудники
           </a>
 
-          <a class="nc-footer__link nc-footer__link--primary" href="/#roadmap-screen">
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="/#roadmap-screen"
+          >
             План внедрения ИИ
           </a>
 
-          <a class="nc-footer__link nc-footer__link--primary" href="/#gui-screen">
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="/#gui-screen"
+          >
             Интерфейс платформы
+          </a>
+
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="/#advantages-screen"
+          >
+            Преимущества
           </a>
         </nav>
 
@@ -63,6 +79,7 @@
           <a
             class="nc-footer__link nc-footer__link--primary"
             href="https://t.me/dom_neuro_cluster"
+            target="_blank"
           >
             <img src="/icons/telegram.svg" alt="telegram-icon"/>
 
@@ -76,6 +93,15 @@
             <img src="/icons/phone.svg" alt="phone-icon"/>
 
             <span>+7 (995) 698-28-20</span>
+          </a>
+
+          <a
+            class="nc-footer__link nc-footer__link--primary"
+            href="https://tenchat.ru/neuro-cluster"
+          >
+            <img src="/icons/tenchat.svg" alt="tenchat-icon"/>
+
+            <span>Блог в TenChat</span>
           </a>
         </div>
       </div>
