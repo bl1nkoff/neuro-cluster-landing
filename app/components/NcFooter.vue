@@ -71,7 +71,11 @@
             class="nc-footer__link nc-footer__link--primary"
             href="mailto:dom@neuro-cluster.com"
           >
-            <img src="/icons/mail.svg" alt="mail-icon"/>
+            <img
+              src="/icons/mail.svg"
+              class="nc-footer__link-icon"
+              alt="mail-icon"
+            />
 
             <span>dom@neuro-cluster.com</span>
           </a>
@@ -81,7 +85,11 @@
             href="https://t.me/dom_neuro_cluster"
             target="_blank"
           >
-            <img src="/icons/telegram.svg" alt="telegram-icon"/>
+            <img
+              src="/icons/telegram.svg"
+              class="nc-footer__link-icon"
+              alt="telegram-icon"
+            />
 
             <span>@dom_neuro_cluster</span>
           </a>
@@ -90,7 +98,11 @@
             class="nc-footer__link nc-footer__link--primary"
             href="tel:+79956982820"
           >
-            <img src="/icons/phone.svg" alt="phone-icon"/>
+            <img
+              src="/icons/phone.svg"
+              class="nc-footer__link-icon"
+              alt="phone-icon"
+            />
 
             <span>+7 (995) 698-28-20</span>
           </a>
@@ -99,7 +111,11 @@
             class="nc-footer__link nc-footer__link--primary"
             href="https://tenchat.ru/neuro-cluster"
           >
-            <img src="/icons/tenchat.svg" alt="tenchat-icon"/>
+            <img
+              src="/icons/tenchat.svg"
+              class="nc-footer__link-icon"
+              alt="tenchat-icon"
+            />
 
             <span>Блог в TenChat</span>
           </a>
@@ -182,6 +198,7 @@
     padding: 4px
     display: inline-flex
     gap: 8px
+    align-items: center
 
     &--primary
       color: var(--text-color-secondary)
@@ -189,4 +206,7 @@
     &:hover:not(&--pseudo)
       color: var(--text-color)
 
+  &__link-icon
+    height: 16px
+    width: 16px
 </style>
