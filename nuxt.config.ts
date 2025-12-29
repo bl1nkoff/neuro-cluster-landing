@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         {property: 'og:type', content: 'website'},
         {property: 'og:url', content: 'https://neuro-cluster.com'},
         {property: 'og:site_name', content: 'НейроКластер'},
-        {property: 'og:updated_time', content: '2025-10-23T11:00:00.000+03:00'},
+        {property: 'og:updated_time', content: '2025-12-29T16:30:00.000+03:00'},
         // раскомментируйте, когда добавите og.png в public/
         // { property: 'og:image', content: '/og.png' },
       ],

@@ -4,7 +4,10 @@
 
     <div class="nc-footer">
       <div class="nc-footer__logo">
-        НейроКластер
+        <p>ООО «НейроКластер»</p>
+        <p>ОГРН: 1253600019705</p>
+        <p>ИНН: 3665833720</p>
+        <p>г. Воронеж</p>
       </div>
 
       <div class="nc-footer__legal-content">
@@ -154,16 +157,16 @@
 
   &__logo
     color: inherit
-    font-weight: bold
+    //font-weight: bold
     grid-area: logo
 
-    // pc
-    @media(min-width: 1000px)
-      font-size: 32px
-
-    // mobile
-    @media(max-width: 1000px)
-      font-size: 24px
+    //// pc
+    //@media(min-width: 1000px)
+    //  font-size: 32px
+    //
+    //// mobile
+    //@media(max-width: 1000px)
+    //  font-size: 24px
 
   &__content-column
     display: flex
@@ -197,7 +200,7 @@
     color: #545454
     transition: color .2s ease
     padding: 4px
-    display: inline-flex
+    display: inline-flexR
     gap: 8px
     align-items: center
 
