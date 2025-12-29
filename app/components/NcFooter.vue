@@ -156,9 +156,10 @@
     background: var(--background-color)
 
   &__logo
-    color: inherit
+    //color: inherit
     //font-weight: bold
     grid-area: logo
+    color: #545454
 
     //// pc
     //@media(min-width: 1000px)
@@ -200,7 +201,7 @@
     color: #545454
     transition: color .2s ease
     padding: 4px
-    display: inline-flexR
+    display: inline-flex
     gap: 8px
     align-items: center
 
