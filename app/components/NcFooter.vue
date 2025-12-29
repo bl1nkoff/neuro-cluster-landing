@@ -12,7 +12,7 @@
 
       <div class="nc-footer__legal-content">
         <div class="nc-footer__link nc-footer__link--pseudo">
-          © 2025 «НейроКластер». Все&nbsp;права&nbsp;защищены
+          © 2026 «НейроКластер». Все&nbsp;права&nbsp;защищены
         </div>
 
         <a
